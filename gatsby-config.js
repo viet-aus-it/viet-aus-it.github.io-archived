@@ -1,15 +1,12 @@
+const config = require('./config');
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
-    },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    title: config.siteTitle,
+    author: config.author,
+    description: config.siteDescription,
+    siteUrl: config.siteUrl,
+    social: config.socialLinks,
   },
   plugins: [
     {
@@ -50,12 +47,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -76,8 +67,37 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+    {
+      resolve: `gatsby-plugin-humans-txt`,
+      options: {
+        team: [
+          {
+            Developer: 'Sam Huynh @ viet-aus-it',
+            GitHub: 'viet-aus-it',
+          },
+        ],
+        thanks: ['Gatsby', 'Node', 'React', 'GitHub Pages & Actions'],
+        site: {
+          'Last update': '2020/03/05',
+          Standards: 'JavaScript, TypeScript, React, AirBnB',
+          Components: 'humans-generator',
+          Softwares: 'Visual Studio Code',
+        },
+      },
+    },
+    // Install and enable this for Google Analytics GTAG support
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     //trackingIds: [`ADD YOUR TRACKING ID HERE`],
+    //   },
+    //   gtagConfig: {
+    //     anonymizeIp: true,
+    //   }
+    // },
   ],
 };
