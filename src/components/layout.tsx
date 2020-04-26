@@ -3,12 +3,32 @@ import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`;
-  let header;
+type LayoutProps = {
+  location: LocationType;
+  title: string;
+  children: React.ReactNode | Element;
+};
 
-  if (location.pathname === rootPath) {
-    header = (
+function Layout({ location, title, children }: LayoutProps) {
+  // This is not going to be undef, since it's going to be passed in upon build.
+  // eslint-disable-next-line no-undef
+  const pathPrefix = __PATH_PREFIX__;
+  const rootPath = `${pathPrefix}/`;
+  const CurrentYear = new Date().getFullYear();
+  const LinkContent = (
+    <Link
+      style={{
+        boxShadow: `none`,
+        color: `inherit`,
+      }}
+      to="/"
+    >
+      {title}
+    </Link>
+  );
+
+  const header =
+    location.pathname === rootPath ? (
       <h1
         style={{
           ...scale(1.5),
@@ -16,37 +36,19 @@ const Layout = ({ location, title, children }) => {
           marginTop: 0,
         }}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
+        {LinkContent}
       </h1>
-    );
-  } else {
-    header = (
+    ) : (
       <h3
         style={{
           fontFamily: `Montserrat, sans-serif`,
           marginTop: 0,
         }}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
+        {LinkContent}
       </h3>
     );
-  }
+
   return (
     <div
       style={{
@@ -59,12 +61,11 @@ const Layout = ({ location, title, children }) => {
       <header>{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
+        {`© ${CurrentYear}, Built with `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
     </div>
   );
-};
+}
 
 export default Layout;

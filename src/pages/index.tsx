@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
@@ -5,7 +6,7 @@ import Bio from '../components/bio';
 import Layout from '../components/layout';
 import { rhythm } from '../utils/typography';
 
-const BlogIndex = ({ data, location }) => {
+function BlogIndex({ data, location }: PagePropsType) {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
 
@@ -40,7 +41,7 @@ const BlogIndex = ({ data, location }) => {
       })}
     </Layout>
   );
-};
+}
 
 export default BlogIndex;
 
