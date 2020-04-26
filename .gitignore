@@ -57,6 +57,8 @@ typings/
 # gatsby files
 .cache/
 public
+reduxcache*
+storybook-static
 
 # Mac files
 .DS_Store
