@@ -15,6 +15,11 @@ module.exports = {
     name: 'Vietnamese Aussies in IT',
     summary: 'A group of IT Geeks in Australia',
   },
+  contributors: {
+    name: 'Sam Huynh',
+    email: 'samhwang2112.dev@gmail.com',
+    github: 'samhwang',
+  },
   socialLinks: {
     github: 'viet-aus-it',
   },
