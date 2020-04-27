@@ -33,11 +33,11 @@ jobs:
           yarn install
           yarn clean
 
-      # - name: Run linting
-      #   run: yarn lint
+      - name: Run linting
+        run: yarn lint
 
-      # - name: Run tests
-      #   run: yarn test:coverage
+      - name: Run tests
+        run: yarn test:coverage
 
       - name: Build Public files
         run: yarn build
