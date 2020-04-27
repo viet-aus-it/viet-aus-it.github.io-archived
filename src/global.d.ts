@@ -13,7 +13,7 @@ type Post = {
     date: string;
     description: string;
   };
-  html: Element;
+  html: string;
   excerpt: string;
   node: Post;
 };
@@ -33,4 +33,21 @@ type SiteDataType = {
 type PagePropsType = {
   data: SiteDataType;
   location: LocationType;
+};
+
+type Author = {
+  name: string;
+  summary: string;
+};
+
+type SocialLink = {
+  github: string;
+};
+
+type FixedImageProps = {
+  height: number;
+  width: number;
+  src: string;
+  srcSet: string;
+  base64: string;
 };

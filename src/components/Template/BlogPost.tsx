@@ -2,10 +2,10 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Bio from '../components/bio';
-import Layout from '../components/layout';
-import SEO from '../components/SEO';
-import { rhythm, scale } from '../utils/typography';
+import Bio from '../Bio';
+import Layout from './Layout';
+import SEO from './SEO';
+import { rhythm, scale } from '../../utils/typography';
 
 type BlogPostProps = {
   data: SiteDataType;
