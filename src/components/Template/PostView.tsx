@@ -4,7 +4,10 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { rhythm } from '../../utils/typography';
 
-function PostView({ node, title }: { node: Post; title: string }) {
+function PostView({ node }: { node: Post }) {
+  const title = node.frontmatter.title || node.fields.slug;
+
+  const postContent = node.frontmatter.description || node.excerpt || '';
   return (
     <article key={node.fields.slug}>
       <header>
@@ -22,7 +25,7 @@ function PostView({ node, title }: { node: Post; title: string }) {
       <section>
         <p
           dangerouslySetInnerHTML={{
-            __html: node.frontmatter.description || node.excerpt,
+            __html: postContent,
           }}
         />
       </section>

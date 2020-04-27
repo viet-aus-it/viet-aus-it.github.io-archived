@@ -1,6 +1,6 @@
 import React from 'react';
+import RenderLayout from '../components/Template/Layout/RenderLayout';
 import PureBio from '../components/Bio/PureBio';
-import { rhythm } from '../utils/typography';
 
 export default {
   title: 'Bio',
@@ -23,14 +23,7 @@ const avatar = {
 };
 
 export const TestBio = () => (
-  <div
-    style={{
-      marginLeft: `auto`,
-      marginRight: `auto`,
-      maxWidth: rhythm(24),
-      padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-    }}
-  >
+  <RenderLayout>
     <PureBio author={author} social={social} avatar={avatar} />
-  </div>
+  </RenderLayout>
 );

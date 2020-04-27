@@ -11,11 +11,11 @@ type Post = {
   frontmatter: {
     title: string;
     date: string;
-    description: string;
+    description?: string;
   };
-  html: string;
-  excerpt: string;
-  node: Post;
+  html?: string;
+  excerpt?: string;
+  node?: Post;
 };
 
 type SiteDataType = {

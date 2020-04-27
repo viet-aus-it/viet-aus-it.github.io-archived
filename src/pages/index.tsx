@@ -15,8 +15,7 @@ function BlogIndex({ data, location }: PagePropsType) {
       <SEO title="All posts" />
       <Bio />
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
-        return <PostView node={node} title={title} key={title} />;
+        return node && <PostView node={node} key={node.fields.slug} />;
       })}
     </Layout>
   );
