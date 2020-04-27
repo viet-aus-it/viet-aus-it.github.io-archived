@@ -3,7 +3,8 @@
 git fetch origin ${DEPLOY_BRANCH}
 git checkout ${DEPLOY_BRANCH}
 
-find . -maxdepth 1 ! -name 'public' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
+mv storybook-static ./public/storybook
+find . -maxdepth 1 ! -name 'public' ! -name 'storybook-static' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
 mv public/* .
 rm -Rf public/
 

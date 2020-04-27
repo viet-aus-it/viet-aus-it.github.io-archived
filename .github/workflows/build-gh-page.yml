@@ -42,6 +42,9 @@ jobs:
       - name: Build Public files
         run: yarn build
 
+      - name: Build Storybook static
+        run: yarn build-storybook
+
       - name: Set up git credentials
         env:
           USER_NAME: ${{ secrets.USER_NAME }}
