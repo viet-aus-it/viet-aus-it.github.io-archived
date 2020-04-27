@@ -21,7 +21,7 @@ function Header({ isRootPath, title }: HeaderProps) {
   );
 
   const HeaderContent = isRootPath ? (
-    <h2
+    <h1
       style={{
         ...scale(1.5),
         marginBottom: rhythm(1.5),
@@ -29,16 +29,16 @@ function Header({ isRootPath, title }: HeaderProps) {
       }}
     >
       {LinkContent}
-    </h2>
+    </h1>
   ) : (
-    <h4
+    <h3
       style={{
         fontFamily: `Montserrat, sans-serif`,
         marginTop: 0,
       }}
     >
       {LinkContent}
-    </h4>
+    </h3>
   );
 
   return <header>{HeaderContent}</header>;
