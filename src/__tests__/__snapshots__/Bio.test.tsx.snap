@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bio Rendering should render without crashing 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "marginBottom": "4.375rem",
+    }
+  }
+>
+  <div
+    className=" gatsby-image-wrapper"
+    style={
+      Object {
+        "borderRadius": "100%",
+        "display": "inline-block",
+        "height": 50,
+        "marginBottom": 0,
+        "marginRight": "0.875rem",
+        "minWidth": 50,
+        "overflow": "hidden",
+        "position": "relative",
+        "width": 50,
+      }
+    }
+  >
+    <img
+      alt=""
+      aria-hidden={true}
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAACbElEQVQ4y6VVW08TURDe/4qgVRQvCeID/gWNvpgYNcQnrAqC0aBGwUARYuKDIAKyF9i2sHvaPXvpBYkZZ+ac3XZrIQYeJtnM5Zs5M/PNGmEYQhQnEDUOtbQhiiIgPduSJsSpLWl19OjDvqhnO2KQ3qAP6bkgtksgfi2D2FmBsC5UQBRD3d0Af3sJpQS13e9ajwllHYT5lWPIHuzbDGpQBnI2nw2B9bwA9vR1NFpobHB1ldIjtA2y3Z2/q15DRYgKOK9vgVW8AObkIHjrcxA3fxNgm7NYL4bBenkFnNlRDZgowOXHHETJ3IV7So+VS1GF3TfjGHMZbRfB+/EeAQ9VhQrwkgKcGc1VWF19CvbUVaz8GpQXH+gKFaCTARaOB7RTwKTBTaanBfsm66TvQjrEUwA2MVhmT2fRkzwDYKhFagnPDpiuSbYupwKsmup5MsiBcoWoo2/pl/8PkKZMznHrj2KC7luHUW0MPIIwqOHa3FbrdmKFr26wUeysgr+1mDGAdw8ZRawgNvk/53FnxzimB7CdAfK+TY0ocMxsTp5jBhCHqacExoyiqth/hPezf4XFgspGPaFK0dksnkfHD0wpOgBUGdOTknb5UhJv/V0X9dCROEy0o6GQOLM3uWJv7S32S+DB8MHf/Jz5Ob1+Gx85qcHTw+tCq5IXE3u2B5UvE3gExvgQEPWCA6e/b93jPhtqLeIOG7pYEbeOEPCJ6hseiPLCfX37GkzNnD9iqHuYHVOZZwbtG12bpYc4nAEekPvpjl4j+a+/3lejlwm5a43BNfsb9nGOp02rlFbSj0XHAuZohivDU0ZJfwEnxfwFd0mIytdl8/EAAAAASUVORK5CYII="
+      style={
+        Object {
+          "borderRadius": "50%",
+          "height": "100%",
+          "left": 0,
+          "objectFit": "cover",
+          "objectPosition": "center",
+          "opacity": 1,
+          "position": "absolute",
+          "top": 0,
+          "transitionDelay": "500ms",
+          "width": "100%",
+        }
+      }
+    />
+    <picture>
+      <source
+        srcSet="/static/15bedc08e38e45f354967dc7a3797c7f/8ba1e/avatar.png 1x,↵/static/15bedc08e38e45f354967dc7a3797c7f/f937a/avatar.png 1.5x, /static/15bedc08e38e45f354967dc7a3797c7f/71eb7/avatar.png 2x"
+      />
+      <img
+        alt="Viet-Aus-IT"
+        height={50}
+        loading="lazy"
+        onLoad={[Function]}
+        src="/static/15bedc08e38e45f354967dc7a3797c7f/8ba1e/avatar.png"
+        srcSet="/static/15bedc08e38e45f354967dc7a3797c7f/8ba1e/avatar.png 1x,↵/static/15bedc08e38e45f354967dc7a3797c7f/f937a/avatar.png 1.5x, /static/15bedc08e38e45f354967dc7a3797c7f/71eb7/avatar.png 2x"
+        style={
+          Object {
+            "borderRadius": "50%",
+            "height": "100%",
+            "left": 0,
+            "objectFit": "cover",
+            "objectPosition": "center",
+            "opacity": 0,
+            "position": "absolute",
+            "top": 0,
+            "transition": "opacity 500ms",
+            "width": "100%",
+          }
+        }
+        width={50}
+      />
+    </picture>
+    <noscript
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<picture><source srcset=\\"/static/15bedc08e38e45f354967dc7a3797c7f/8ba1e/avatar.png 1x,↵/static/15bedc08e38e45f354967dc7a3797c7f/f937a/avatar.png 1.5x, /static/15bedc08e38e45f354967dc7a3797c7f/71eb7/avatar.png 2x\\" /><img loading=\\"lazy\\" width=\\"50\\" height=\\"50\\" srcset=\\"/static/15bedc08e38e45f354967dc7a3797c7f/8ba1e/avatar.png 1x,↵/static/15bedc08e38e45f354967dc7a3797c7f/f937a/avatar.png 1.5x, /static/15bedc08e38e45f354967dc7a3797c7f/71eb7/avatar.png 2x\\" src=\\"/static/15bedc08e38e45f354967dc7a3797c7f/8ba1e/avatar.png\\" alt=\\"Viet-Aus-IT\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+        }
+      }
+    />
+  </div>
+  <p>
+    Written by 
+    <strong>
+      Viet-Aus-IT
+    </strong>
+     A group of IT Geeks 
+    <a
+      href="https://github.com/viet-aus-it"
+    >
+      We're on GitHub.
+    </a>
+  </p>
+</div>
+`;

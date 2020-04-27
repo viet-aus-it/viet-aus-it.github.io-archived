@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render without crashing 1`] = `
+<header>
+  <h1
+    style={
+      Object {
+        "fontSize": "3.95285rem",
+        "lineHeight": "4.375rem",
+        "marginBottom": "2.625rem",
+        "marginTop": 0,
+      }
+    }
+  >
+    <a
+      href="/"
+      style={
+        Object {
+          "boxShadow": "none",
+          "color": "inherit",
+        }
+      }
+    >
+      Viet-Aus-IT Blog
+    </a>
+  </h1>
+</header>
+`;
+
+exports[`Footer should render without crashing 2`] = `
+<header>
+  <h3
+    style={
+      Object {
+        "fontFamily": "Montserrat, sans-serif",
+        "marginTop": 0,
+      }
+    }
+  >
+    <a
+      href="/"
+      style={
+        Object {
+          "boxShadow": "none",
+          "color": "inherit",
+        }
+      }
+    >
+      Viet-Aus-IT Blog
+    </a>
+  </h3>
+</header>
+`;

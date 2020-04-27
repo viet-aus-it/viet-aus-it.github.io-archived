@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render without crashing 1`] = `
+<footer>
+  © 2020, Built with 
+  <a
+    href="https://www.gatsbyjs.org"
+  >
+    Gatsby
+  </a>
+   Hosted on 
+  <a
+    href="https://pages.github.com/"
+  >
+    GitHub Pages
+  </a>
+</footer>
+`;
