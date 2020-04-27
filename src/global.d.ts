@@ -11,8 +11,10 @@ type Post = {
   frontmatter: {
     title: string;
     date: string;
+    description: string;
   };
   html: Element;
+  excerpt: string;
   node: Post;
 };
 
