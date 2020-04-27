@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer should render without crashing 1`] = `
+exports[`Header should render without crashing 1`] = `
 <header>
   <h1
     style={
@@ -27,7 +27,7 @@ exports[`Footer should render without crashing 1`] = `
 </header>
 `;
 
-exports[`Footer should render without crashing 2`] = `
+exports[`Header should render without crashing 2`] = `
 <header>
   <h3
     style={

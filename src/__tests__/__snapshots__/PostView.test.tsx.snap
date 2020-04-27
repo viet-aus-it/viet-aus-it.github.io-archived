@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post View should render without crashing 1`] = `
+<article>
+  <header>
+    <h3
+      style={
+        Object {
+          "marginBottom": "0.4375rem",
+        }
+      }
+    >
+      <a
+        href="Test Post"
+        style={
+          Object {
+            "boxShadow": "none",
+          }
+        }
+      >
+        Test Post
+      </a>
+    </h3>
+    <small>
+      27/04/2020
+    </small>
+  </header>
+  <section>
+    <p
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>This is just a test post</p>",
+        }
+      }
+    />
+  </section>
+</article>
+`;
