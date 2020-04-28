@@ -28,7 +28,9 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "predeploy": "gh-pages-clean",
+    "deploy": "gh-pages -d public -b master"
   },
   "dependencies": {
     "gatsby": "^2.20.35",
