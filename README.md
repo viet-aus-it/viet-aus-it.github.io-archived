@@ -4,6 +4,7 @@
 ![GitHub](https://img.shields.io/github/license/viet-aus-it/viet-aus-it.github.io?style=for-the-badge)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/viet-aus-it/viet-aus-it.github.io?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/viet-aus-it/viet-aus-it.github.io?style=for-the-badge)
+[![Coverage Status](https://coveralls.io/repos/github/viet-aus-it/viet-aus-it.github.io/badge.svg?branch=develop)](https://coveralls.io/github/viet-aus-it/viet-aus-it.github.io?branch=develop)
 
 Created with [Gatsby](https://gatsbyjs.org), hosted on [GitHubPages](https://pages.github.com/).
 
