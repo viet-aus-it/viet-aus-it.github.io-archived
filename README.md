@@ -23,8 +23,11 @@ Created with [Gatsby](https://gatsbyjs.org), hosted on [GitHubPages](https://pag
 
 ## Working with this repo
 
+For Contributions, please have a look at our [CONTRIBUTORS.md](https://github.com/viet-aus-it/viet-aus-it.github.io/blob/develop/.github/CONTRIBUTING.md)
+
 ```bash
 git clone https://github.com/viet-aus-it/viet-aus-it.github.io.git
 cd viet-aus-it.github.io
+nvm use # If you have nvm, run this to use the correct Node version
 yarn start
 ```
