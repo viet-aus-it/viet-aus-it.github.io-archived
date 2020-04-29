@@ -9,7 +9,7 @@ type Post = {
     slug: string;
   };
   frontmatter: {
-    title: string;
+    title?: string;
     date: string;
     description?: string;
   };

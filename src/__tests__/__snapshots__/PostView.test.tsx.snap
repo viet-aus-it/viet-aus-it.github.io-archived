@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Post View should render without crashing 1`] = `
+exports[`Post View should render "proper" post nodes 1`] = `
 <article>
   <header>
     <h3
@@ -30,6 +30,117 @@ exports[`Post View should render without crashing 1`] = `
       dangerouslySetInnerHTML={
         Object {
           "__html": "<p>This is just a test post</p>",
+        }
+      }
+    />
+  </section>
+</article>
+`;
+
+exports[`Post View should render post nodes with missing frontmatter details 1`] = `
+<article>
+  <header>
+    <h3
+      style={
+        Object {
+          "marginBottom": "0.4375rem",
+        }
+      }
+    >
+      <a
+        href="Test Post"
+        style={
+          Object {
+            "boxShadow": "none",
+          }
+        }
+      >
+        Test Post
+      </a>
+    </h3>
+    <small>
+      27/04/2020
+    </small>
+  </header>
+  <section>
+    <p
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>This is just a test post</p>",
+        }
+      }
+    />
+  </section>
+</article>
+`;
+
+exports[`Post View should render post nodes with missing frontmatter details 2`] = `
+<article>
+  <header>
+    <h3
+      style={
+        Object {
+          "marginBottom": "0.4375rem",
+        }
+      }
+    >
+      <a
+        href="Test Post"
+        style={
+          Object {
+            "boxShadow": "none",
+          }
+        }
+      >
+        Test Post
+      </a>
+    </h3>
+    <small>
+      27/04/2020
+    </small>
+  </header>
+  <section>
+    <p
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+    />
+  </section>
+</article>
+`;
+
+exports[`Post View should render post nodes with missing frontmatter details 3`] = `
+<article>
+  <header>
+    <h3
+      style={
+        Object {
+          "marginBottom": "0.4375rem",
+        }
+      }
+    >
+      <a
+        href="Test Post"
+        style={
+          Object {
+            "boxShadow": "none",
+          }
+        }
+      >
+        Test Post
+      </a>
+    </h3>
+    <small>
+      27/04/2020
+    </small>
+  </header>
+  <section>
+    <p
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
         }
       }
     />
