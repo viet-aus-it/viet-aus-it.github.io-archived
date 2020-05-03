@@ -5,6 +5,7 @@ on:
     branches:
       - develop
     paths:
+      - content/**
       - src/**
       - "!src/stories/*"
       - "!src/__mocks__/*"
