@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Viet-Aus-IT Blog]]></title><description><![CDATA[Viet-aus-it blog]]></description><link>https://viet-aus-it.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 29 Apr 2020 03:52:20 GMT</lastBuildDate><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Viet-Aus-IT Blog]]></title><description><![CDATA[Viet-aus-it blog]]></description><link>https://viet-aus-it.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 03 May 2020 01:59:36 GMT</lastBuildDate><item><title><![CDATA[One month in Quarrantine]]></title><description><![CDATA[After one month in quarrantine, situations are now being relaxed.
+During that one month, we have been doing a lot of technical 101
+talks. 1…]]></description><link>https://viet-aus-it.github.io/one-month-in-quarrantine/</link><guid isPermaLink="false">https://viet-aus-it.github.io/one-month-in-quarrantine/</guid><pubDate>Sat, 02 May 2020 05:39:00 GMT</pubDate><content:encoded>&lt;p&gt;After one month in quarrantine, situations are now being relaxed.
+During that one month, we have been doing a lot of technical 101
+talks. 10, to be exact. Our deepest thanks go to our speakers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Trung Ly&lt;/strong&gt; &lt;a href=&quot;https://github.com/exNewbie&quot;&gt;(@exNewbie)&lt;/a&gt; for his talk on AWS
+LightSail, a cheap way to get started on AWS.&lt;/li&gt;
+&lt;li&gt;Cuong Do &lt;a href=&quot;https://github.com/dohaicuong&quot;&gt;(@dohaicuong)&lt;/a&gt; for his talk on
+GraphQL 101, and how to replace REST APIs with GraphQL to reduce
+“endpoint spaghetti”.&lt;/li&gt;
+&lt;li&gt;Andy Truong &lt;a href=&quot;https://github.com/andytruong&quot;&gt;(@andytruong)&lt;/a&gt; for his ideas
+about implementing microservices architecture and all of its troubles.&lt;/li&gt;
+&lt;li&gt;Sam Huynh &lt;a href=&quot;https://github.com/samhwang&quot;&gt;(@samhwang)&lt;/a&gt; for an introduction
+on Docker and Docker-Compose, and also on getting started with CI/CD
+with GitHub Actions.&lt;/li&gt;
+&lt;li&gt;Paul Nguyen &lt;a href=&quot;https://github.com/punkupoz&quot;&gt;(@punkupoz)&lt;/a&gt; for an introduction
+to container orchestration with Kubernetes.&lt;/li&gt;
+&lt;li&gt;Luan Nguyen (&lt;a href=&quot;https://github.com/tklarryonline&quot;&gt;@tklarryonline)&lt;/a&gt; for an
+in-depth overview of UX/UI Design in Agile projects.&lt;/li&gt;
+&lt;li&gt;Van Hoang &lt;a href=&quot;https://www.linkedin.com/in/van-hoang-cam/&quot;&gt;LinkedIn&lt;/a&gt;,
+who brought us inside the minds of a recruiter in the tech world.&lt;/li&gt;
+&lt;li&gt;Toan Ha &lt;a href=&quot;https://www.linkedin.com/in/hamanhtritoan/&quot;&gt;LinkedIn&lt;/a&gt;,
+with his brief description on what Business Analysis actually is, and
+what should be involved.&lt;/li&gt;
+&lt;li&gt;Last and not least, we have Khiem Nguyen
+&lt;a href=&quot;https://www.linkedin.com/in/nguyenthanhkhiemvn/&quot;&gt;LinkedIn&lt;/a&gt;
+shed light to us on his journey transitioning from a Developer to
+a Businessman.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We hope that everyone had been learning something new. Not just from
+the talks, but also on your own as well. Keep on learning, and keep on
+keeping on.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7b54bd2848eb4a6a9504a33327b7bb42/4d836/learning_brain.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60.810810810810814%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIDBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAB1UthSEgz/8QAGRABAQADAQAAAAAAAAAAAAAAAgEAEBIx/9oACAEBAAEFAlFF0lglh93/AP/EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/Aaf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAbEAABBAMAAAAAAAAAAAAAAAABABESICExUf/aAAgBAQAGPwKUscRGkxL0/8QAGxABAAICAwAAAAAAAAAAAAAAAQARIVEQMUH/2gAIAQEAAT8hT+WAYqkwp1AVruJSmVm9cf/aAAwDAQACAAMAAAAQAw//xAAWEQEBAQAAAAAAAAAAAAAAAAABERD/2gAIAQMBAT8QDImf/8QAFhEAAwAAAAAAAAAAAAAAAAAAEBEh/9oACAECAQE/EFR//8QAHBABAAIBBQAAAAAAAAAAAAAAAQARIRAxcZHB/9oACAEBAAE/EDPbAO8eROYil5R+YwaMg71Epa3Y70//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Keep on Learning!&quot;
+        title=&quot;Keep on Learning!&quot;
+        src=&quot;/static/7b54bd2848eb4a6a9504a33327b7bb42/1c72d/learning_brain.jpg&quot;
+        srcset=&quot;/static/7b54bd2848eb4a6a9504a33327b7bb42/a80bd/learning_brain.jpg 148w,
+/static/7b54bd2848eb4a6a9504a33327b7bb42/1c91a/learning_brain.jpg 295w,
+/static/7b54bd2848eb4a6a9504a33327b7bb42/1c72d/learning_brain.jpg 590w,
+/static/7b54bd2848eb4a6a9504a33327b7bb42/a8a14/learning_brain.jpg 885w,
+/static/7b54bd2848eb4a6a9504a33327b7bb42/4d836/learning_brain.jpg 920w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://viet-aus-it.github.io/new-beginnings/</link><guid isPermaLink="false">https://viet-aus-it.github.io/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
