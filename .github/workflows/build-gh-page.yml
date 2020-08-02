@@ -9,11 +9,14 @@ on:
       - src/**
       - "!src/stories/*"
       - "!src/__mocks__/*"
+      - "!src/__tests__/*"
       - static/**
       - .github/workflows/build-gh-page.yml
       - .github/workflows/build.bash
       - config.js
       - gatsby-config.js
+      - package.json
+      - yarn.lock
 
 jobs:
   initialize:
