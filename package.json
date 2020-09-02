@@ -80,7 +80,7 @@
     "@typescript-eslint/parser": "^2.21.0",
     "babel-jest": "^26.2.2",
     "babel-loader": "^8.1.0",
-    "babel-preset-gatsby": "^0.4.0",
+    "babel-preset-gatsby": "^0.5.1",
     "babel-preset-react-app": "^9.1.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
