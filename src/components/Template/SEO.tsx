@@ -2,16 +2,20 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-type MetaProp = { name?: string; content?: string; property?: string };
-
-type SEOProps = {
-  description?: string;
-  lang?: string;
-  title: string;
-  meta: Array<MetaProp> | MetaProp;
+type MetaProp = {
+  name?: string;
+  content?: string;
+  property?: string;
 };
 
-function SEO({ description, meta, lang, title }: SEOProps) {
+type SEOProps = {
+  title: string;
+  description?: string;
+  lang?: string;
+  meta?: Array<MetaProp> | MetaProp;
+};
+
+function SEO({ title, description, lang, meta }: SEOProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -48,6 +52,8 @@ function SEO({ description, meta, lang, title }: SEOProps) {
     },
   ];
 
+  const helmetMeta = meta ? defaultMeta.concat(meta) : defaultMeta;
+
   return (
     <Helmet
       htmlAttributes={{
@@ -55,7 +61,7 @@ function SEO({ description, meta, lang, title }: SEOProps) {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={defaultMeta.concat(meta)}
+      meta={helmetMeta}
     />
   );
 }
