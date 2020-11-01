@@ -68,7 +68,7 @@
     "@babel/core": "^7.9.0",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-links": "^5.3.17",
-    "@storybook/addons": "^5.3.17",
+    "@storybook/addons": "^6.0.28",
     "@storybook/react": "^5.3.17",
     "@types/jest": "^25.1.4",
     "@types/node": "^13.13.4",
