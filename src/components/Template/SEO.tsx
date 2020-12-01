@@ -1,18 +1,18 @@
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-type MetaProp = {
+interface MetaProp {
   name?: string;
   content?: string;
   property?: string;
-};
+}
 
-type SEOProps = {
+interface SEOProps {
   title: string;
   description?: string;
   lang?: string;
   meta?: Array<MetaProp> | MetaProp;
-};
+}
 
 function SEO({ title, description, lang, meta }: SEOProps) {
   const { site } = useStaticQuery(

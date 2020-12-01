@@ -3,11 +3,11 @@ import Header from '../Header';
 import Footer from '../Footer';
 import RenderLayout from './RenderLayout';
 
-type LayoutProps = {
+interface LayoutProps {
   location: LocationType;
   title: string;
   children: ReactNode | Element;
-};
+}
 
 function Layout({ location, title, children }: LayoutProps) {
   // This is not going to be undef, since it's going to be passed in upon build.

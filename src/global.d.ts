@@ -1,10 +1,10 @@
 declare module 'typography-theme-wordpress-2016';
 
-type LocationType = {
+interface LocationType {
   pathname: string;
-};
+}
 
-type Post = {
+interface Post {
   fields: {
     slug: string;
   };
@@ -16,9 +16,9 @@ type Post = {
   html?: string;
   excerpt?: string;
   node?: Post;
-};
+}
 
-type SiteDataType = {
+interface SiteDataType {
   markdownRemark: Post;
   allMarkdownRemark: {
     edges: Post[];
@@ -28,26 +28,26 @@ type SiteDataType = {
       title: string;
     };
   };
-};
+}
 
-type PagePropsType = {
+interface PagePropsType {
   data: SiteDataType;
   location: LocationType;
-};
+}
 
-type Author = {
+interface Author {
   name: string;
   summary: string;
-};
+}
 
-type SocialLink = {
+interface SocialLink {
   github: string;
-};
+}
 
-type FixedImageProps = {
+interface FixedImageProps {
   height: number;
   width: number;
   src: string;
   srcSet: string;
   base64: string;
-};
+}

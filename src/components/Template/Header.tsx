@@ -1,10 +1,10 @@
 import { Link } from 'gatsby';
 import { rhythm, scale } from '../../utils/typography';
 
-type HeaderProps = {
+interface HeaderProps {
   isRootPath: boolean;
   title: string;
-};
+}
 
 function Header({ isRootPath, title }: HeaderProps) {
   const LinkContent = (

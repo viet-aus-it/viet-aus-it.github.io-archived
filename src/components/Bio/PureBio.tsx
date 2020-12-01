@@ -1,11 +1,11 @@
 import Image from 'gatsby-image';
 import { rhythm } from '../../utils/typography';
 
-type BioProps = {
+interface BioProps {
   author: Author;
   social: SocialLink;
   avatar: FixedImageProps;
-};
+}
 
 function PureBio({ author, social, avatar }: BioProps) {
   return (

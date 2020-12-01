@@ -6,14 +6,14 @@ import Layout from './Layout';
 import SEO from './SEO';
 import { rhythm, scale } from '../../utils/typography';
 
-type BlogPostProps = {
+interface BlogPostProps {
   data: SiteDataType;
   pageContext: {
     previous: Post;
     next: Post;
   };
   location: LocationType;
-};
+}
 
 function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
   const post = data.markdownRemark;

@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
 import { rhythm } from '../../../utils/typography';
 
-type RenderProps = {
+interface RenderProps {
   children: ReactNode;
-};
+}
 
 function RenderLayout({ children }: RenderProps) {
   return (
