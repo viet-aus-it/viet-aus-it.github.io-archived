@@ -1,8 +1,8 @@
-import * as React from 'react';
+import type { ReactNode } from 'react';
 import { rhythm } from '../../../utils/typography';
 
 type RenderProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 function RenderLayout({ children }: RenderProps) {

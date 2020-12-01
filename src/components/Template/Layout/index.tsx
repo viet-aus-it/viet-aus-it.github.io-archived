@@ -1,4 +1,4 @@
-import * as React from 'react';
+import type { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
 import RenderLayout from './RenderLayout';
@@ -6,7 +6,7 @@ import RenderLayout from './RenderLayout';
 type LayoutProps = {
   location: LocationType;
   title: string;
-  children: React.ReactNode | Element;
+  children: ReactNode | Element;
 };
 
 function Layout({ location, title, children }: LayoutProps) {
