@@ -1,11 +1,9 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Footer from '../components/Template/Footer';
 
 describe('Footer', () => {
   it('should render without crashing', () => {
-    const tree = renderer.create(<Footer />).toJSON();
+    const tree = render(<Footer />);
     expect(tree).toMatchSnapshot();
   });
 });

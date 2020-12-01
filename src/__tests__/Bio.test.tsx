@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import PureBio from '../components/Bio/PureBio';
 
 describe('Bio Rendering', () => {
@@ -23,7 +22,7 @@ describe('Bio Rendering', () => {
         }}
       />
     );
-    const tree = renderer.create(BioComponent).toJSON();
+    const tree = render(BioComponent);
     expect(tree).toMatchSnapshot();
   });
 });

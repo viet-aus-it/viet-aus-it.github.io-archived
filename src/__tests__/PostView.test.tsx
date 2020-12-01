@@ -1,5 +1,4 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import PostView from '../components/Template/PostView';
 
 describe('Post View', () => {
@@ -16,7 +15,7 @@ describe('Post View', () => {
       except: '<p>This is just a test post</p>',
     };
 
-    const tree = renderer.create(<PostView node={fullNode} />).toJSON();
+    const tree = render(<PostView node={fullNode} />);
     expect(tree).toMatchSnapshot();
   });
 
@@ -31,9 +30,7 @@ describe('Post View', () => {
       },
       except: '<p>This is just a test post</p>',
     };
-    const tree2 = renderer
-      .create(<PostView node={withoutFrontmatterTitle} />)
-      .toJSON();
+    const tree2 = render(<PostView node={withoutFrontmatterTitle} />);
     expect(tree2).toMatchSnapshot();
 
     const withoutFrontmatterDesc = {
@@ -46,9 +43,7 @@ describe('Post View', () => {
       },
       except: '<p>This is just a test post</p>',
     };
-    const tree3 = renderer
-      .create(<PostView node={withoutFrontmatterDesc} />)
-      .toJSON();
+    const tree3 = render(<PostView node={withoutFrontmatterDesc} />);
     expect(tree3).toMatchSnapshot();
 
     const withoutFrontmatterTitleAndDesc = {
@@ -60,9 +55,7 @@ describe('Post View', () => {
       },
       except: '<p>This is just a test post</p>',
     };
-    const tree4 = renderer
-      .create(<PostView node={withoutFrontmatterTitleAndDesc} />)
-      .toJSON();
+    const tree4 = render(<PostView node={withoutFrontmatterTitleAndDesc} />);
     expect(tree4).toMatchSnapshot();
   });
 });

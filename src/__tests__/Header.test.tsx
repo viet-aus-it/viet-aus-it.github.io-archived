@@ -1,19 +1,14 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Header from '../components/Template/Header';
 
 describe('Header', () => {
   it('should render without crashing', () => {
-    const treeRootPath = renderer
-      .create(<Header isRootPath title="Viet-Aus-IT Blog" />)
-      .toJSON();
+    const treeRootPath = render(<Header isRootPath title="Viet-Aus-IT Blog" />);
     expect(treeRootPath).toMatchSnapshot();
 
-    const treeNotRoot = renderer
-      .create(<Header isRootPath={false} title="Viet-Aus-IT Blog" />)
-      .toJSON();
+    const treeNotRoot = render(
+      <Header isRootPath={false} title="Viet-Aus-IT Blog" />
+    );
     expect(treeNotRoot).toMatchSnapshot();
   });
 });
