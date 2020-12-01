@@ -67,5 +67,10 @@ storybook-static
 yarn-error.log
 .pnp/
 .pnp.js
-# Yarn Integrity file
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
 .yarn-integrity
