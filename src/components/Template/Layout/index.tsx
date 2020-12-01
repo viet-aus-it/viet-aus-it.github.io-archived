@@ -12,7 +12,6 @@ type LayoutProps = {
 function Layout({ location, title, children }: LayoutProps) {
   // This is not going to be undef, since it's going to be passed in upon build.
   // @ts-ignore
-  // eslint-disable-next-line no-undef
   const pathPrefix = __PATH_PREFIX__;
   const rootPath = `${pathPrefix}/`;
 
