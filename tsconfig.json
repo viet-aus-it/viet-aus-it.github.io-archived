@@ -6,7 +6,7 @@
     "lib": ["dom", "esnext"],
     "allowJs": true,
     "checkJs": true,
-    "jsx": "react",
+    "jsx": "react-jsxdev",
     "strict": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
