@@ -1,4 +1,3 @@
-import React from 'react';
 import RenderLayout from '../components/Template/Layout/RenderLayout';
 import Footer from '../components/Template/Footer';
 
