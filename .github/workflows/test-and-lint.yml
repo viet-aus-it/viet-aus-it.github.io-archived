@@ -15,10 +15,10 @@ jobs:
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Set up Node 12 and Yarn 1.22
+      - name: Set up Node 14
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '14.x'
 
       - name: Set up project
         run: |
