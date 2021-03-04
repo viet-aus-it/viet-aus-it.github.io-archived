@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <footer>
-        © 2020, Built with 
+        © 2021, Built with 
         <a
           href="https://www.gatsbyjs.org"
         >
@@ -23,7 +23,7 @@ Object {
   </body>,
   "container": <div>
     <footer>
-      © 2020, Built with 
+      © 2021, Built with 
       <a
         href="https://www.gatsbyjs.org"
       >
