@@ -1,6 +1,5 @@
 /* eslint-disable react/no-danger */
 import { Link, graphql } from 'gatsby';
-
 import Bio from '../Bio';
 import Layout from './Layout';
 import SEO from './SEO';
@@ -9,22 +8,22 @@ import { rhythm, scale } from '../../utils/typography';
 interface BlogPostProps {
   data: SiteDataType;
   pageContext: {
-    previous: Post;
-    next: Post;
+    previous: ContentfulPost;
+    next: ContentfulPost;
   };
   location: LocationType;
 }
 
 function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
-  const post = data.markdownRemark;
+  const post = data.contentfulBlogPost;
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title={post.frontmatter.title ?? siteTitle}
-        description={post.frontmatter.description || post.excerpt}
+        title={post.title ?? siteTitle}
+        description={post.body.childMarkdownRemark.excerpt}
       />
       <article>
         <header>
@@ -34,7 +33,7 @@ function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
               marginBottom: 0,
             }}
           >
-            {post.frontmatter.title}
+            {post.title}
           </h1>
           <p
             style={{
@@ -43,15 +42,15 @@ function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date}
+            {post.publishDate}
           </p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
+        <section
+          dangerouslySetInnerHTML={{
+            __html: post.body.childMarkdownRemark.html ?? '',
           }}
         />
+        <hr style={{ marginBottom: rhythm(1) }} />
         <footer>
           <Bio />
         </footer>
@@ -69,15 +68,15 @@ function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                {`← ${previous.frontmatter.title}`}
+              <Link to={previous.slug} rel="prev">
+                {`← ${previous.title}`}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
-                {`${next.frontmatter.title} →`}
+              <Link to={next.slug} rel="next">
+                {`${next.title} →`}
               </Link>
             )}
           </li>
@@ -96,14 +95,13 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
+    contentfulBlogPost(slug: { eq: $slug }) {
+      title
+      publishDate(formatString: "MMMM Do, YYYY")
+      body {
+        childMarkdownRemark {
+          html
+        }
       }
     }
   }
