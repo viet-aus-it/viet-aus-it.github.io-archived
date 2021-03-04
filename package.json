@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "dotenv": "^8.2.0",
     "gatsby": "^3.0.1",
     "gatsby-plugin-feed": "^3.0.0",
     "gatsby-plugin-google-gtag": "^3.0.0",
@@ -52,6 +53,7 @@
     "gatsby-remark-prismjs": "^4.0.0",
     "gatsby-remark-responsive-iframe": "^3.0.0",
     "gatsby-remark-smartypants": "^3.0.0",
+    "gatsby-source-contentful": "^5.0.0",
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-remark": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
