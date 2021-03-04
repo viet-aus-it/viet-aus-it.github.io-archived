@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "date-fns": "^2.18.0",
     "dotenv": "^8.2.0",
     "gatsby": "^3.0.1",
     "gatsby-plugin-feed": "^3.0.0",
