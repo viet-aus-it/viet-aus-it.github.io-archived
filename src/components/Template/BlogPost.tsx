@@ -1,9 +1,18 @@
 /* eslint-disable react/no-danger */
 import { Link, graphql } from 'gatsby';
+import { parse, format } from 'date-fns';
+import enAU from 'date-fns/locale/en-AU';
 import Bio from '../Bio';
 import Layout from './Layout';
 import SEO from './SEO';
 import { rhythm, scale } from '../../utils/typography';
+
+function formatPublishedDate(dateString: string) {
+  const parseDate = parse(dateString, "yyyy-MM-dd'T'hh:mmXXX", new Date(), {
+    locale: enAU,
+  });
+  return format(parseDate, 'MMM dd, yyyy', { locale: enAU });
+}
 
 interface BlogPostProps {
   data: SiteDataType;
@@ -18,6 +27,7 @@ function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
   const post = data.contentfulBlogPost;
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
+  const publishedDate = formatPublishedDate(post.publishDate);
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -42,7 +52,7 @@ function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
               marginBottom: rhythm(1),
             }}
           >
-            {post.publishDate}
+            {publishedDate}
           </p>
         </header>
         <section
@@ -97,7 +107,7 @@ export const pageQuery = graphql`
     }
     contentfulBlogPost(slug: { eq: $slug }) {
       title
-      publishDate(formatString: "MMMM Do, YYYY")
+      publishDate
       body {
         childMarkdownRemark {
           html
