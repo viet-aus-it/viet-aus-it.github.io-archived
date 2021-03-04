@@ -4,25 +4,27 @@ interface LocationType {
   pathname: string;
 }
 
-interface Post {
-  fields: {
-    slug: string;
+interface ContentfulPost {
+  title: string;
+  slug: string;
+  publishDate: string;
+  body: {
+    childMarkdownRemark: {
+      excerpt?: string;
+      html?: string;
+    };
   };
-  frontmatter: {
-    title?: string;
-    date: string;
-    description?: string;
-  };
-  html?: string;
-  excerpt?: string;
-  node?: Post;
+}
+interface AllContentfulPosts {
+  edges: [
+    {
+      node: ContentfulPost;
+    }
+  ];
 }
 
 interface SiteDataType {
-  markdownRemark: Post;
-  allMarkdownRemark: {
-    edges: Post[];
-  };
+  allContentfulBlogPost: AllContentfulPosts;
   site: {
     siteMetadata: {
       title: string;

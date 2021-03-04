@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-
+import { Helmet } from 'react-helmet';
 import Bio from '../components/Bio';
 import Layout from '../components/Template/Layout';
 import SEO from '../components/Template/SEO';
@@ -7,14 +7,15 @@ import PostView from '../components/Template/PostView';
 
 function BlogIndex({ data, location }: PagePropsType) {
   const siteTitle = data.site.siteMetadata.title;
-  const posts = data.allMarkdownRemark.edges;
+  const posts = data.allContentfulBlogPost.edges;
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
+      <Helmet title={siteTitle} />
       <Bio />
       {posts.map(
-        ({ node }) => node && <PostView node={node} key={node.fields.slug} />
+        ({ node }) => node && <PostView node={node} key={node.slug} />
       )}
     </Layout>
   );
@@ -29,17 +30,16 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
+          title
+          slug
+          publishDate(formatString: "MMMM Do, YYYY")
+          body {
+            childMarkdownRemark {
+              excerpt
+            }
           }
         }
       }
