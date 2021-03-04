@@ -6,9 +6,7 @@ function Bio() {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/avatar.png/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       site {
@@ -26,7 +24,7 @@ function Bio() {
   `);
 
   const { author, social } = data.site.siteMetadata;
-  const avatar = data.avatar.childImageSharp.fixed;
+  const avatar = data.avatar.childImageSharp.gatsbyImageData;
 
   return <PureBio author={author} social={social} avatar={avatar} />;
 }

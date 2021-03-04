@@ -18,6 +18,6 @@ window.___navigate = (pathname) => {
  * Temporary fix
  * @see: https://github.com/gatsbyjs/gatsby/issues/28253
  */
-config.resolve.alias[
-  "$virtual/lazy-client-sync-requires"
-] = require.resolve('../src/__mocks__/virtual-lazy-client-sync-requires')
+config.resolve.alias['$virtual/lazy-client-sync-requires'] = require.resolve(
+  '../src/__mocks__/virtual-lazy-client-sync-requires'
+);

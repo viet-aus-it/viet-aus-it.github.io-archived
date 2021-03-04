@@ -44,10 +44,23 @@ interface SocialLink {
   github: string;
 }
 
-interface FixedImageProps {
+interface GatsbyImageData {
   height: number;
   width: number;
-  src: string;
-  srcSet: string;
-  base64: string;
+  layout: string;
+  backgroundColor: string;
+  images: {
+    fallback: {
+      src: string;
+      srcSet: string;
+      sizes: string;
+    };
+    sources: [
+      {
+        srcSet: string;
+        type: string;
+        sizes: string;
+      }
+    ];
+  };
 }

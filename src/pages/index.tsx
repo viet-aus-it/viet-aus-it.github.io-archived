@@ -13,9 +13,9 @@ function BlogIndex({ data, location }: PagePropsType) {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
-      {posts.map(({ node }) => {
-        return node && <PostView node={node} key={node.fields.slug} />;
-      })}
+      {posts.map(
+        ({ node }) => node && <PostView node={node} key={node.fields.slug} />
+      )}
     </Layout>
   );
 }
