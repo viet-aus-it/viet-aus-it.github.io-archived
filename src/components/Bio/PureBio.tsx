@@ -4,7 +4,7 @@ import { rhythm } from '../../utils/typography';
 interface BioProps {
   author: Author;
   social: SocialLink;
-  avatar: FixedImageProps;
+  avatar: GatsbyImageData;
 }
 
 function PureBio({ author, social, avatar }: BioProps) {
