@@ -25,6 +25,7 @@ interface AllContentfulPosts {
 
 interface SiteDataType {
   allContentfulBlogPost: AllContentfulPosts;
+  contentfulBlogPost: ContentfulPost;
   site: {
     siteMetadata: {
       title: string;
