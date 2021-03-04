@@ -90,6 +90,10 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: config.contentfulConfig,
+    },
     // Install and enable this for Google Analytics GTAG support
     // {
     //   resolve: `gatsby-plugin-google-gtag`,
