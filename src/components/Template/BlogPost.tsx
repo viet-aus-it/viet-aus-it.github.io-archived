@@ -1,18 +1,10 @@
 /* eslint-disable react/no-danger */
 import { Link, graphql } from 'gatsby';
-import { parse, format } from 'date-fns';
-import enAU from 'date-fns/locale/en-AU';
 import Bio from '../Bio';
 import Layout from './Layout';
 import SEO from './SEO';
 import { rhythm, scale } from '../../utils/typography';
-
-function formatPublishedDate(dateString: string) {
-  const parseDate = parse(dateString, "yyyy-MM-dd'T'hh:mmXXX", new Date(), {
-    locale: enAU,
-  });
-  return format(parseDate, 'MMM dd, yyyy', { locale: enAU });
-}
+import formatPublishedDate from '../../utils/formatPublishedDate';
 
 interface BlogPostProps {
   data: SiteDataType;

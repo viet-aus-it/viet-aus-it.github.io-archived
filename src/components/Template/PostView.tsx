@@ -2,10 +2,12 @@
 
 import { Link } from 'gatsby';
 import { rhythm } from '../../utils/typography';
+import formatPublishedDate from '../../utils/formatPublishedDate';
 
 function PostView({ node }: { node: ContentfulPost }) {
   const title = node.title || node.slug;
   const postContent = node.body.childMarkdownRemark.excerpt || '';
+  const publishedDate = formatPublishedDate(node.publishDate);
 
   return (
     <article>
@@ -19,7 +21,7 @@ function PostView({ node }: { node: ContentfulPost }) {
             {title}
           </Link>
         </h3>
-        <small>{node.publishDate}</small>
+        <small>{publishedDate}</small>
       </header>
       <section>
         <p
