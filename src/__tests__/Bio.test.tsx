@@ -10,8 +10,15 @@ describe('Bio Rendering', () => {
           name: 'Viet-Aus-IT',
           summary: 'A group of IT Geeks',
         }}
-        social={{ github: 'viet-aus-it' }}
+        social={{
+          github: 'viet-aus-it',
+          discord: 'waYhnk4NKy',
+          facebookPage: 'vietausit',
+          facebookGroup: 'vietausit',
+        }}
         avatar={{
+          height: 500,
+          width: 500,
           layout: 'fixed',
           backgroundColor: '#ffffff',
           images: {

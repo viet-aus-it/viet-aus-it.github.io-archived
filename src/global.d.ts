@@ -72,4 +72,7 @@ interface Author {
 
 interface SocialLink {
   github: string;
+  discord: string;
+  facebookGroup: string;
+  facebookPage: string;
 }

@@ -44,16 +44,35 @@ Object {
           </script>
         </div>
         <p>
-          Written by 
+          A blog by 
           <strong>
             Viet-Aus-IT
           </strong>
-           A group of IT Geeks 
+           - A group of IT Geeks. We're on 
           <a
             href="https://github.com/viet-aus-it"
           >
-            We're on GitHub.
+            GitHub
           </a>
+          , 
+          <a
+            href="https://discord.gg/waYhnk4NKy"
+          >
+            Discord
+          </a>
+          . Our Facebook 
+          <a
+            href="https://discord.gg/vietausit"
+          >
+            group
+          </a>
+           and 
+          <a
+            href="https://discord.gg/vietausit"
+          >
+            page
+          </a>
+          .
         </p>
       </div>
     </div>
@@ -98,16 +117,35 @@ Object {
         </script>
       </div>
       <p>
-        Written by 
+        A blog by 
         <strong>
           Viet-Aus-IT
         </strong>
-         A group of IT Geeks 
+         - A group of IT Geeks. We're on 
         <a
           href="https://github.com/viet-aus-it"
         >
-          We're on GitHub.
+          GitHub
         </a>
+        , 
+        <a
+          href="https://discord.gg/waYhnk4NKy"
+        >
+          Discord
+        </a>
+        . Our Facebook 
+        <a
+          href="https://discord.gg/vietausit"
+        >
+          group
+        </a>
+         and 
+        <a
+          href="https://discord.gg/vietausit"
+        >
+          page
+        </a>
+        .
       </p>
     </div>
   </div>,
