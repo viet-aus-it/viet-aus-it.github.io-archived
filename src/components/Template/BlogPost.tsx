@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import { Link, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import Bio from '../Bio';
+import Author from './Author';
 import Layout from './Layout';
 import SEO from './SEO';
 import { rhythm, scale } from '../../utils/typography';
@@ -57,7 +57,7 @@ function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
         />
         <hr style={{ marginBottom: rhythm(1) }} />
         <footer>
-          <Bio />
+          <Author author={post.author} />
         </footer>
       </article>
 
@@ -109,6 +109,23 @@ export const pageQuery = graphql`
       body {
         childMarkdownRemark {
           html
+        }
+      }
+      author {
+        name
+        title
+        company
+        shortBio {
+          shortBio
+          childMarkdownRemark {
+            html
+          }
+        }
+        github
+        facebook
+        # twitter
+        image {
+          gatsbyImageData
         }
       }
     }

@@ -25,6 +25,23 @@ interface LocationType {
   pathname: string;
 }
 
+interface ContentfulAuthor {
+  name: string;
+  title: string;
+  company: string;
+  shortBio: {
+    childMarkdownRemark: {
+      html: string;
+    };
+  };
+  facebook?: string;
+  github?: string;
+  twitter?: string;
+  image: {
+    gatsbyImageData: GatsbyImageData;
+  };
+}
+
 interface ContentfulPost {
   title: string;
   slug: string;
@@ -41,6 +58,7 @@ interface ContentfulPost {
   heroImage: {
     gatsbyImageData: GatsbyImageData;
   };
+  author: ContentfulAuthor;
 }
 interface AllContentfulPosts {
   edges: [
