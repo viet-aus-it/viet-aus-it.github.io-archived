@@ -3,13 +3,11 @@ import Author from '../components/Template/Author';
 
 describe('Author view', () => {
   it('Should render "proper" author node', () => {
-    const author = {
+    const author: ContentfulAuthor = {
       name: 'Vietnamese Aussies in IT',
       title: 'Non-profit Organization',
       company: 'VAIT',
       shortBio: {
-        shortBio:
-          "We're a group of IT Geeks in Australia.\n\nCome find us on [GitHub](https://github.com/viet-aus-it/), [Discord](https://discord.gg/waYhnk4NKy), Facebook [group](https://www.facebook.com/group/vietausit) and [page](https://www.facebook.com/vietausit).",
         childMarkdownRemark: {
           html:
             '<p>We’re a group of IT Geeks in Australia.</p>\n<p>Come find us on <a href="https://github.com/viet-aus-it/">GitHub</a>, <a href="https://discord.gg/waYhnk4NKy">Discord</a>, Facebook <a href="https://www.facebook.com/group/vietausit">group</a> and <a href="https://www.facebook.com/vietausit">page</a>.</p>',
