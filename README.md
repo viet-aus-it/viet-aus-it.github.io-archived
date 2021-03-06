@@ -31,3 +31,11 @@ cd viet-aus-it.github.io
 nvm use # If you have nvm, run this to use the correct Node version
 yarn start
 ```
+
+## For authors writing a blog post
+
+- You need to be added into the [Contentful Space for VAIT](https://app.contentful.com/spaces/yy5lveaxjicl)
+- Click on "Content" > "Add Entry"
+- Click on "Person" if you want to add a new Author bio.
+- Click on "Blog Post" if you want to create a blog post.
+- Do both of those steps to create a guest blog post.
