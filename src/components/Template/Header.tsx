@@ -19,7 +19,7 @@ function Header({ isRootPath, title }: HeaderProps) {
     </Link>
   );
 
-  const HeaderContent = isRootPath ? (
+  const RootHeader = (
     <h1
       style={{
         ...scale(1.5),
@@ -29,7 +29,9 @@ function Header({ isRootPath, title }: HeaderProps) {
     >
       {LinkContent}
     </h1>
-  ) : (
+  );
+
+  const PageHeader = (
     <h3
       style={{
         fontFamily: `Montserrat, sans-serif`,
@@ -38,7 +40,9 @@ function Header({ isRootPath, title }: HeaderProps) {
     >
       {LinkContent}
     </h3>
-  );
+  )
+
+  const HeaderContent = isRootPath ? RootHeader : PageHeader;
 
   return <header>{HeaderContent}</header>;
 }
