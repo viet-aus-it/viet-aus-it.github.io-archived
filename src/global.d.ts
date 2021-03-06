@@ -8,6 +8,9 @@ interface ContentfulPost {
   title: string;
   slug: string;
   publishDate: string;
+  description: {
+    description: string;
+  };
   body: {
     childMarkdownRemark: {
       excerpt?: string;

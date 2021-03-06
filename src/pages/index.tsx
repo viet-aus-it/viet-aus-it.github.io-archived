@@ -24,7 +24,7 @@ function BlogIndex({ data, location }: PagePropsType) {
 export default BlogIndex;
 
 export const pageQuery = graphql`
-  query {
+  query AllBlogPost {
     site {
       siteMetadata {
         title
@@ -39,6 +39,9 @@ export const pageQuery = graphql`
           title
           slug
           publishDate
+          description {
+            description
+          }
           body {
             childMarkdownRemark {
               excerpt
