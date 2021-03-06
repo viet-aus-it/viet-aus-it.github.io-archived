@@ -6,7 +6,8 @@ import formatPublishedDate from '../../utils/formatPublishedDate';
 
 function PostView({ node }: { node: ContentfulPost }) {
   const title = node.title || node.slug;
-  const postContent = node.body.childMarkdownRemark.excerpt || '';
+  const postContent =
+    node.description.description || node.body.childMarkdownRemark.excerpt || '';
   const publishedDate = formatPublishedDate(node.publishDate);
 
   return (
