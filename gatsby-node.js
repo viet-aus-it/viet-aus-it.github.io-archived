@@ -1,4 +1,5 @@
 const path = require(`path`);
+const { uniqBy } = require(`lodash`);
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -22,7 +23,8 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Create blog posts pages.
-  const posts = result.data.allContentfulBlogPost.edges;
+  const contentfulPosts = result.data.allContentfulBlogPost.edges;
+  const posts = uniqBy(contentfulPosts, ({ node }) => node.slug);
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;

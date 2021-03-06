@@ -4,10 +4,12 @@ import Bio from '../components/Bio';
 import Layout from '../components/Template/Layout';
 import SEO from '../components/Template/SEO';
 import PostView from '../components/Template/PostView';
+import getUniquePostsBySlug from '../utils/getUniquePostBySlug';
 
 function BlogIndex({ data, location }: PagePropsType) {
   const siteTitle = data.site.siteMetadata.title;
-  const posts = data.allContentfulBlogPost.edges;
+  const contentfulPosts = data.allContentfulBlogPost.edges;
+  const posts = getUniquePostsBySlug(contentfulPosts);
 
   return (
     <Layout location={location} title={siteTitle}>
