@@ -1,5 +1,6 @@
 /* eslint-disable react/no-danger */
 import { Link, graphql } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Bio from '../Bio';
 import Layout from './Layout';
 import SEO from './SEO';
@@ -20,6 +21,7 @@ function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
   const publishedDate = formatPublishedDate(post.publishDate);
+  const heroImage = post.heroImage.gatsbyImageData;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -47,6 +49,7 @@ function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
             {publishedDate}
           </p>
         </header>
+        <GatsbyImage image={heroImage} alt={post.title} />
         <section
           dangerouslySetInnerHTML={{
             __html: post.body.childMarkdownRemark.html ?? '',
@@ -100,6 +103,9 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishDate
+      heroImage {
+        gatsbyImageData
+      }
       body {
         childMarkdownRemark {
           html
