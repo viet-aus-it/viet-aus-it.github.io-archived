@@ -3,6 +3,8 @@ import PostView from '../components/Template/PostView';
 
 describe('Post View', () => {
   it('should render "proper" post nodes', () => {
+    const author = {} as ContentfulAuthor;
+    const image = {} as GatsbyImageData;
     const fullNode = {
       title: 'Test Post',
       slug: 'Test Post',
@@ -14,6 +16,10 @@ describe('Post View', () => {
         childMarkdownRemark: {
           excerpt: '<p>This is just a test post</p>',
         },
+      },
+      author,
+      heroImage: {
+        gatsbyImageData: image,
       },
     };
 

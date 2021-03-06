@@ -6,6 +6,8 @@ export default {
   component: PostView,
 };
 
+const author = {} as ContentfulAuthor;
+const image = {} as GatsbyImageData;
 const postNode = {
   title: 'Test Post',
   slug: 'Test Post',
@@ -17,6 +19,10 @@ const postNode = {
     childMarkdownRemark: {
       excerpt: '<p>This is just a test post</p>',
     },
+  },
+  author,
+  heroImage: {
+    gatsbyImageData: image,
   },
 };
 
