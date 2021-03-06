@@ -51,4 +51,4 @@ export const TestAuthor = () => (
       <Author author={author} />
     </main>
   </RenderLayout>
-)
+);
