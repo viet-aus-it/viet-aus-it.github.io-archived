@@ -40,7 +40,7 @@ function Header({ isRootPath, title }: HeaderProps) {
     >
       {LinkContent}
     </h3>
-  )
+  );
 
   const HeaderContent = isRootPath ? RootHeader : PageHeader;
 
