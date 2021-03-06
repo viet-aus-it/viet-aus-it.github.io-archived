@@ -7,15 +7,17 @@ export default {
 };
 
 const postNode = {
-  fields: {
-    slug: 'Test Post',
+  title: 'Test Post',
+  slug: 'Test Post',
+  publishDate: '2020-04-27T12:00+11:00',
+  description: {
+    description: 'Test Description',
   },
-  frontmatter: {
-    title: 'Test Post',
-    date: '27/04/2020',
-    description: '<p>This is just a test post</p>',
+  body: {
+    childMarkdownRemark: {
+      excerpt: '<p>This is just a test post</p>',
+    },
   },
-  except: '<p>This is just a test post</p>',
 };
 
 export const TestPost = () => (
