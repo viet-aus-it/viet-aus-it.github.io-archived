@@ -1,5 +1,26 @@
 declare module 'typography-theme-wordpress-2016';
 
+interface GatsbyImageData {
+  height: number;
+  width: number;
+  layout: 'fixed' | 'fullWidth' | 'constrained';
+  backgroundColor: string;
+  images: {
+    fallback: {
+      src: string;
+      srcSet: string;
+      sizes: string;
+    };
+    sources: [
+      {
+        srcSet: string;
+        type: string;
+        sizes: string;
+      }
+    ];
+  };
+}
+
 interface LocationType {
   pathname: string;
 }
@@ -16,6 +37,9 @@ interface ContentfulPost {
       excerpt?: string;
       html?: string;
     };
+  };
+  heroImage: {
+    gatsbyImageData: GatsbyImageData;
   };
 }
 interface AllContentfulPosts {
@@ -48,25 +72,4 @@ interface Author {
 
 interface SocialLink {
   github: string;
-}
-
-interface GatsbyImageData {
-  height: number;
-  width: number;
-  layout: string;
-  backgroundColor: string;
-  images: {
-    fallback: {
-      src: string;
-      srcSet: string;
-      sizes: string;
-    };
-    sources: [
-      {
-        srcSet: string;
-        type: string;
-        sizes: string;
-      }
-    ];
-  };
 }
