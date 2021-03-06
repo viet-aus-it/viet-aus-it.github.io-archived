@@ -13,7 +13,7 @@ describe('Post View', () => {
       body: {
         childMarkdownRemark: {
           excerpt: '<p>This is just a test post</p>',
-        }
+        },
       },
     };
 
