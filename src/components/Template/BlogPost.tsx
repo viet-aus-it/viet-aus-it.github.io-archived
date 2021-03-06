@@ -10,8 +10,8 @@ import formatPublishedDate from '../../utils/formatPublishedDate';
 interface BlogPostProps {
   data: SiteDataType;
   pageContext: {
-    previous: ContentfulPost;
-    next: ContentfulPost;
+    previous: ContentfulPost | null;
+    next: ContentfulPost | null;
   };
   location: LocationType;
 }
