@@ -42,6 +42,9 @@ module.exports = {
   },
   socialLinks: {
     github: 'viet-aus-it',
+    discord: 'waYhnk4NKy',
+    facebookPage: 'vietausit',
+    facebookGroup: 'vietausit',
   },
   contentfulConfig,
 };

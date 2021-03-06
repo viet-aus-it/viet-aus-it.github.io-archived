@@ -30,12 +30,16 @@ function PureBio({ author, social, avatar }: BioProps) {
         }}
       />
       <p>
-        {`Written by `}
+        {`A blog by `}
         <strong>{author.name}</strong>
-        {` ${author.summary} `}
-        <a href={`https://github.com/${social.github}`}>
-          We&apos;re on GitHub.
-        </a>
+        {` - ${author.summary}. We're on `}
+        <a href={`https://github.com/${social.github}`}>GitHub</a>
+        {`, `}
+        <a href={`https://discord.gg/${social.discord}`}>Discord</a>
+        {`. Our Facebook `}
+        <a href={`https://discord.gg/${social.facebookGroup}`}>group</a>
+        {` and `}
+        <a href={`https://discord.gg/${social.facebookPage}`}>page</a>.
       </p>
     </div>
   );
