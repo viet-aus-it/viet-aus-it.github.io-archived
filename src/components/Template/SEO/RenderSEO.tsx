@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
 
 interface MetaProp {
   name?: string;
@@ -14,22 +13,22 @@ interface SEOProps {
   meta?: Array<MetaProp> | MetaProp;
 }
 
-function SEO({ title, description, lang, meta }: SEOProps) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-          }
-        }
-      }
-    `
-  );
+interface RenderSEOProps extends SEOProps {
+  defaultFallback: {
+    title: string;
+    description: string;
+  };
+}
 
-  const siteTitle = site.siteMetadata.title;
-  const metaDescription = description || site.siteMetadata.description;
+function RenderSEO({
+  title,
+  description,
+  lang,
+  meta,
+  defaultFallback,
+}: RenderSEOProps) {
+  const siteTitle = defaultFallback.title;
+  const metaDescription = description || defaultFallback.description;
   const defaultMeta: Array<MetaProp> = [
     {
       name: `description`,
@@ -58,7 +57,7 @@ function SEO({ title, description, lang, meta }: SEOProps) {
   return (
     <Helmet
       defaultTitle={siteTitle}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${defaultFallback.title}`}
     >
       <html lang={lang} />
       <title>{title}</title>
@@ -75,10 +74,11 @@ function SEO({ title, description, lang, meta }: SEOProps) {
   );
 }
 
-SEO.defaultProps = {
+RenderSEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
 };
 
-export default SEO;
+export default RenderSEO;
+export type { SEOProps };
