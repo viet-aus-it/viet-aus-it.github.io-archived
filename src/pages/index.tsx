@@ -1,5 +1,4 @@
 import { graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import Bio from '../components/Bio';
 import Layout from '../components/Template/Layout';
 import SEO from '../components/Template/SEO';
@@ -14,7 +13,6 @@ function BlogIndex({ data, location }: PagePropsType) {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <Helmet title={siteTitle} />
       <Bio />
       {posts.map(
         ({ node }) => node && <PostView node={node} key={node.slug} />

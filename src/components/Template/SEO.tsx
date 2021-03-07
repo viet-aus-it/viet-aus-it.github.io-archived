@@ -1,4 +1,4 @@
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 interface MetaProp {
@@ -22,20 +22,22 @@ function SEO({ title, description, lang, meta }: SEOProps) {
           siteMetadata {
             title
             description
-            social {
-              github
-            }
           }
         }
       }
     `
   );
 
+  const siteTitle = site.siteMetadata.title;
   const metaDescription = description || site.siteMetadata.description;
   const defaultMeta: Array<MetaProp> = [
     {
       name: `description`,
       content: metaDescription,
+    },
+    {
+      name: `viewport`,
+      content: 'width=device-width, initial-scale=1',
     },
     {
       property: `og:title`,
@@ -55,13 +57,21 @@ function SEO({ title, description, lang, meta }: SEOProps) {
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
+      defaultTitle={siteTitle}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={helmetMeta}
-    />
+    >
+      <html lang={lang} />
+      <title>{title}</title>
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      {helmetMeta.map(({ name, property, content }) => (
+        <meta
+          key={name || property}
+          name={name && name}
+          property={property && property}
+          content={content}
+        />
+      ))}
+    </Helmet>
   );
 }
 

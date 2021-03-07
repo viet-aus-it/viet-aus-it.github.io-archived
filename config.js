@@ -21,7 +21,7 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteTitle: 'Viet-Aus-IT Blog',
   siteUrl: 'https://viet-aus-it.github.io',
-  siteDescription: 'Viet-aus-it blog',
+  siteDescription: 'A blog for VAIT - Vietnamese Aussies in I.T.',
   manifest: {
     name: 'Viet-aus-it blog',
     shortName: 'Home',
