@@ -6,20 +6,11 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/viet-aus-it/viet-aus-it.github.io?style=for-the-badge)
 [![Coverage Status](https://coveralls.io/repos/github/viet-aus-it/viet-aus-it.github.io/badge.svg?branch=develop)](https://coveralls.io/github/viet-aus-it/viet-aus-it.github.io?branch=develop)
 
-Created with [Gatsby](https://gatsbyjs.org), hosted on [GitHubPages](https://pages.github.com/).
+Created with [Gatsby](https://gatsbyjs.org), hosted on [GitHub Pages](https://pages.github.com/).
 
-## Language
+## Technical details
 
-- TypeScript (primary) and React, runnning on Node 12
-- JavaScript configurations for Gatsby, Jest, and Storybook.
-
-## Tools
-
-- Gatsby static site generator
-- Jest for testing
-- Storybook for UI Testing
-- GitHub Actions for CI/CD
-- GitHub Pages for static site hosting
+For technical details, please refer to [TECHNICAL.md](https://github.com/viet-aus-it/viet-aus-it.github.io/blob/develop/.github/TECHNICAL.md).
 
 ## Working with this repo
 
