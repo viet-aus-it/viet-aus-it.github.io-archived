@@ -1,3 +1,4 @@
+/* istanbul ignore file: This is use only when it's actually rendering */
 import Typography from 'typography';
 import Wordpress2016 from 'typography-theme-wordpress-2016';
 

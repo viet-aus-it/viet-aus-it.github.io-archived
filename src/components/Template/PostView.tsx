@@ -5,9 +5,11 @@ import { rhythm } from '../../utils/typography';
 import formatPublishedDate from '../../utils/formatPublishedDate';
 
 function PostView({ node }: { node: ContentfulPost }) {
-  const title = node.title || node.slug;
-  const postContent =
-    node.description.description || node.body.childMarkdownRemark.excerpt || '';
+  const {
+    title,
+    description: { description },
+  } = node;
+  const postContent = description;
   const publishedDate = formatPublishedDate(node.publishDate);
 
   return (
