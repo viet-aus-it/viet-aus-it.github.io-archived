@@ -29,7 +29,7 @@ module.exports = {
     backgroundColor: '#FFFFFF',
     themeColor: '#663399',
     display: 'minimal-ui',
-    icon: 'content/assets/gatsby-icon.png',
+    icon: 'assets/gatsby-icon.png',
   },
   author: {
     name: 'Vietnamese Aussies in IT',
