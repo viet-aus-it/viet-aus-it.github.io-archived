@@ -27,8 +27,6 @@
     "clean": "gatsby clean",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "predeploy": "gh-pages-clean",
     "deploy": "gh-pages -d public -b master"
   },
@@ -70,11 +68,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@storybook/addon-actions": "^6.1.21",
-    "@storybook/addon-essentials": "^6.1.21",
-    "@storybook/addon-links": "^6.1.21",
-    "@storybook/addons": "^6.1.9",
-    "@storybook/react": "^6.1.21",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@types/jest": "^26.0.16",

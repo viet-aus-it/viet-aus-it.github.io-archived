@@ -3,13 +3,12 @@
 ## Language
 
 - TypeScript (primary) and React, runnning on Node 12
-- JavaScript configurations for Gatsby, Jest, and Storybook.
+- JavaScript configurations for Gatsby, and Jest.
 
 ## Tools
 
 - Gatsby static site generator
 - Jest for testing
-- Storybook for UI Testing
 - GitHub Actions for CI/CD (currently borked...)
 - GitHub Pages for static site hosting
 
