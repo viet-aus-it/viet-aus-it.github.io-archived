@@ -1,7 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
-import PureBio from './PureBio';
 
-function Bio() {
+function useBioQuery() {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/avatar.png/" }) {
@@ -26,7 +25,7 @@ function Bio() {
   const { author, social } = data.site.siteMetadata;
   const avatar = data.avatar.childImageSharp.gatsbyImageData;
 
-  return <PureBio author={author} social={social} avatar={avatar} />;
+  return { author, social, avatar };
 }
 
-export default Bio;
+export default useBioQuery;

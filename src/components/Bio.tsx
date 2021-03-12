@@ -1,13 +1,10 @@
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { rhythm } from '../../utils/typography';
+import { rhythm } from '../utils/typography';
+import useBioQuery from '../hooks/useBioQuery';
 
-interface BioProps {
-  author: Author;
-  social: SocialLink;
-  avatar: GatsbyImageData;
-}
+function Bio() {
+  const { author, social, avatar } = useBioQuery();
 
-function PureBio({ author, social, avatar }: BioProps) {
   return (
     <div
       style={{
@@ -45,4 +42,4 @@ function PureBio({ author, social, avatar }: BioProps) {
   );
 }
 
-export default PureBio;
+export default Bio;
