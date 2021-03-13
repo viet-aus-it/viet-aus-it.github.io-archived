@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet';
+import useSEOQuery from '../../hooks/useSEOQuery';
 
 interface MetaProp {
   name?: string;
@@ -13,20 +14,8 @@ interface SEOProps {
   meta?: Array<MetaProp> | MetaProp;
 }
 
-interface RenderSEOProps extends SEOProps {
-  defaultFallback: {
-    title: string;
-    description: string;
-  };
-}
-
-function RenderSEO({
-  title,
-  description,
-  lang,
-  meta,
-  defaultFallback,
-}: RenderSEOProps) {
+function SEO({ title, description, lang, meta }: SEOProps) {
+  const defaultFallback = useSEOQuery();
   const siteTitle = defaultFallback.title;
   const metaDescription = description || defaultFallback.description;
   const defaultMeta: Array<MetaProp> = [
@@ -74,11 +63,10 @@ function RenderSEO({
   );
 }
 
-RenderSEO.defaultProps = {
+SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
 };
 
-export default RenderSEO;
-export type { SEOProps };
+export default SEO;
