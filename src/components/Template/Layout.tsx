@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
-import RenderLayout from './RenderLayout';
+import Header from './Header';
+import Footer from './Footer';
+import { rhythm } from '../../utils/typography';
 
 interface LayoutProps {
   location: LocationType;
@@ -16,11 +16,18 @@ function Layout({ location, title, children }: LayoutProps) {
   const rootPath = `${pathPrefix}/`;
 
   return (
-    <RenderLayout>
+    <div
+      style={{
+        marginLeft: `auto`,
+        marginRight: `auto`,
+        maxWidth: rhythm(24),
+        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+      }}
+    >
       <Header title={title} isRootPath={location.pathname === rootPath} />
       <main>{children}</main>
       <Footer />
-    </RenderLayout>
+    </div>
   );
 }
 
