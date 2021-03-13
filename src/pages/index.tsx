@@ -1,8 +1,8 @@
 import { graphql } from 'gatsby';
 import Bio from '../components/Bio';
-import Layout from '../components/Template/Layout';
-import SEO from '../components/Template/SEO';
-import PostView from '../components/Template/PostView';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import PostView from '../components/PostView';
 import getUniquePostsBySlug from '../utils/getUniquePostBySlug';
 
 function BlogIndex({ data, location }: PagePropsType) {

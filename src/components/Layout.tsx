@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import { rhythm } from '../../utils/typography';
+import { rhythm } from '../utils/typography';
 
 interface LayoutProps {
   location: LocationType;

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import PostView from '../components/Template/PostView';
+import PostView from '../components/PostView';
 
 describe('Post View', () => {
   it('should render "proper" post nodes', () => {

@@ -4,8 +4,8 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import Author from './Author';
 import Layout from './Layout';
 import SEO from './SEO';
-import { rhythm, scale } from '../../utils/typography';
-import formatPublishedDate from '../../utils/formatPublishedDate';
+import { rhythm, scale } from '../utils/typography';
+import formatPublishedDate from '../utils/formatPublishedDate';
 
 interface BlogPostProps {
   data: SiteDataType;

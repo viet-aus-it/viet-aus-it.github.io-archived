@@ -4,7 +4,7 @@ const { uniqBy } = require(`lodash`);
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const blogPost = path.resolve(`./src/components/Template/BlogPost.tsx`);
+  const blogPost = path.resolve(`./src/components/BlogPost.tsx`);
   const result = await graphql(`
     query ContentfulBlogPosts {
       allContentfulBlogPost {

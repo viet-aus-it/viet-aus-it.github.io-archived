@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { rhythm } from '../../utils/typography';
+import { rhythm } from '../utils/typography';
 
 interface AuthorProps {
   author: ContentfulAuthor;

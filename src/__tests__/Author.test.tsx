@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Author from '../components/Template/Author';
+import Author from '../components/Author';
 
 describe('Author view', () => {
   it('Should render "proper" author node', () => {

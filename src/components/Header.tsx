@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import { rhythm, scale } from '../../utils/typography';
+import { rhythm, scale } from '../utils/typography';
 
 interface HeaderProps {
   isRootPath: boolean;
