@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Header from '../components/Template/Header';
+import Header from '../components/Header';
 
 describe('Header', () => {
   it('should render without crashing', () => {

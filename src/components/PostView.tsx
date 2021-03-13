@@ -1,8 +1,8 @@
 /* eslint-disable react/no-danger */
 
 import { Link } from 'gatsby';
-import { rhythm } from '../../utils/typography';
-import formatPublishedDate from '../../utils/formatPublishedDate';
+import { rhythm } from '../utils/typography';
+import formatPublishedDate from '../utils/formatPublishedDate';
 
 function PostView({ node }: { node: ContentfulPost }) {
   const {
