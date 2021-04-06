@@ -7,7 +7,6 @@ on:
     paths:
       - content/**
       - src/**
-      - "!src/stories/*"
       - "!src/__mocks__/*"
       - "!src/__tests__/*"
       - static/**
@@ -54,8 +53,9 @@ jobs:
       - name: Build Public files
         run: yarn build
         env:
+          NODE_ENV: production
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
 
       - name: Archive public assets
         uses: actions/upload-artifact@v2

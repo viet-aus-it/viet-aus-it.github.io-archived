@@ -30,3 +30,12 @@ yarn start
 - Click on "Person" if you want to add a new Author bio.
 - Click on "Blog Post" if you want to create a blog post.
 - Do both of those steps to create a guest blog post.
+
+## For contributors working on the code
+
+- Clone the project from GitHub.
+- Login to the [Contentful Space for VAIT](https://app.contentful.com/spaces/yy5lveaxjicl)
+- Click on "Settings" > "API Keys"
+- Click on the "Content Delivery / Preview tokens"
+- Copy the `.env.sample` file into an `.env` file.
+- Copy the Space ID and API Tokens into the `.env` file.

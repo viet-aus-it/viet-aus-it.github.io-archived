@@ -1,21 +1,33 @@
 const dotenv = require('dotenv');
 
 dotenv.config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env`,
 });
 
-const contentfulConfig = {
-  spaceId: process.env.CONTENTFUL_SPACE_ID,
-  accessToken:
-    process.env.CONTENTFUL_ACCESS_TOKEN ||
-    process.env.CONTENTFUL_DELIVERY_TOKEN,
-};
+function getContentfulConfig() {
+  const deliverySpace = {
+    spaceId: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
+    host: 'cdn.contentful.com',
+  };
 
-const { spaceId, accessToken } = contentfulConfig;
-if (!spaceId || !accessToken) {
-  throw new Error(
-    'Contentful spaceId and the access token need to be provided.'
-  );
+  const previewSpace = {
+    spaceId: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    host: 'preview.contentful.com',
+  };
+
+  const isProduction = process.env.NODE_ENV === 'production';
+  const contentfulConfig = isProduction ? deliverySpace : previewSpace;
+
+  const { spaceId, accessToken } = contentfulConfig;
+  if (!spaceId || !accessToken) {
+    throw new Error(
+      'Contentful spaceId and the access token need to be provided.'
+    );
+  }
+
+  return contentfulConfig;
 }
 
 module.exports = {
@@ -35,16 +47,11 @@ module.exports = {
     name: 'Vietnamese Aussies in IT',
     summary: 'A group of IT Geeks in Australia',
   },
-  contributors: {
-    name: 'Sam Huynh',
-    email: 'samhwang2112.dev@gmail.com',
-    github: 'samhwang',
-  },
   socialLinks: {
     github: 'viet-aus-it',
     discord: 'waYhnk4NKy',
     facebookPage: 'vietausit',
     facebookGroup: 'vietausit',
   },
-  contentfulConfig,
+  contentfulConfig: getContentfulConfig(),
 };
