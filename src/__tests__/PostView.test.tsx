@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import PostView from '../components/PostView';
+import { PostView } from '../components';
 
 describe('Post View', () => {
   it('should render "proper" post nodes', () => {
@@ -14,7 +14,7 @@ describe('Post View', () => {
         childMarkdownRemark: {
           excerpt: 'Test Description',
           html: '<p>Test Description</p>',
-        }
+        },
       },
       body: {
         childMarkdownRemark: {

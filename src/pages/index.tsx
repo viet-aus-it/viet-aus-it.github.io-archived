@@ -1,9 +1,5 @@
-import useSEOQuery from '../hooks/useSEOQuery';
-import useContentfulBlogPost from '../hooks/useContentfulBlogPost';
-import Bio from '../components/Bio';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import PostView from '../components/PostView';
+import { useSEOQuery, useContentfulBlogPost } from '../hooks';
+import { Bio, Layout, SEO, PostView } from '../components';
 import getUniquePostsBySlug from '../utils/getUniquePostBySlug';
 
 function BlogIndex({ location }: PagePropsType) {

@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { render } from '@testing-library/react';
-import Bio from '../components/Bio';
+import { Bio } from '../components';
 
 jest.mock('../hooks/useBioQuery', () =>
   jest.fn().mockReturnValue({

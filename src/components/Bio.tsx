@@ -1,6 +1,6 @@
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { rhythm } from '../utils/typography';
-import useBioQuery from '../hooks/useBioQuery';
+import { useBioQuery } from '../hooks';
 
 function Bio() {
   const { author, social, avatar } = useBioQuery();

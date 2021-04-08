@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import useSEOQuery from '../hooks/useSEOQuery';
+import { useSEOQuery } from '../hooks';
 
 interface MetaProp {
   name?: string;
