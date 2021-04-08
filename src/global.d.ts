@@ -64,11 +64,7 @@ interface ContentfulPost {
   author: ContentfulAuthor;
 }
 interface AllContentfulPosts {
-  edges: [
-    {
-      node: ContentfulPost;
-    }
-  ];
+  nodes: ContentfulPost[];
 }
 
 interface SiteDataType {

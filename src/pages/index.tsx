@@ -7,16 +7,14 @@ import getUniquePostsBySlug from '../utils/getUniquePostBySlug';
 
 function BlogIndex({ data, location }: PagePropsType) {
   const siteTitle = data.site.siteMetadata.title;
-  const contentfulPosts = data.allContentfulBlogPost.edges;
+  const contentfulPosts = data.allContentfulBlogPost.nodes;
   const posts = getUniquePostsBySlug(contentfulPosts);
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
-      {posts.map(
-        ({ node }) => node && <PostView node={node} key={node.slug} />
-      )}
+      {posts.map((node) => node && <PostView node={node} key={node.slug} />)}
     </Layout>
   );
 }
@@ -34,18 +32,13 @@ export const pageQuery = graphql`
       sort: { fields: [publishDate], order: DESC }
       filter: { node_locale: { eq: "en-AU" } }
     ) {
-      edges {
-        node {
-          title
-          slug
-          publishDate
-          description {
-            description
-          }
-          body {
-            childMarkdownRemark {
-              excerpt
-            }
+      nodes {
+        title
+        slug
+        publishDate
+        description {
+          childMarkdownRemark {
+            html
           }
         }
       }

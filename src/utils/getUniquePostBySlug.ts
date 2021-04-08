@@ -1,7 +1,7 @@
 import { uniqBy } from 'lodash';
 
 export default function getUniquePostsBySlug(
-  contentfulPosts: [{ node: ContentfulPost }]
+  contentfulPosts: ContentfulPost[]
 ) {
-  return uniqBy(contentfulPosts, ({ node }) => node.slug);
+  return uniqBy(contentfulPosts, (node) => node.slug);
 }

@@ -7,12 +7,13 @@ exports.createPages = async ({ graphql, actions }) => {
   const blogPost = path.resolve(`./src/components/BlogPost.tsx`);
   const result = await graphql(`
     query ContentfulBlogPosts {
-      allContentfulBlogPost {
-        edges {
-          node {
-            title
-            slug
-          }
+      allContentfulBlogPost(
+        sort: { fields: [publishDate], order: DESC }
+        filter: { node_locale: { eq: "en-AU" } }
+      ) {
+        nodes {
+          title
+          slug
         }
       }
     }
@@ -23,18 +24,18 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Create blog posts pages.
-  const contentfulPosts = result.data.allContentfulBlogPost.edges;
-  const posts = uniqBy(contentfulPosts, ({ node }) => node.slug);
+  const contentfulPosts = result.data.allContentfulBlogPost.nodes;
+  const posts = uniqBy(contentfulPosts, (node) => node.slug);
 
   posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-    const next = index === 0 ? null : posts[index - 1].node;
+    const previous = index === posts.length - 1 ? null : posts[index + 1];
+    const next = index === 0 ? null : posts[index - 1];
 
     createPage({
-      path: post.node.slug,
+      path: post.slug,
       component: blogPost,
       context: {
-        slug: post.node.slug,
+        slug: post.slug,
         previous,
         next,
       },
