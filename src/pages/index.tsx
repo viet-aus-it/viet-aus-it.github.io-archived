@@ -1,17 +1,18 @@
-import { graphql } from 'gatsby';
+import useSEOQuery from '../hooks/useSEOQuery';
+import useContentfulBlogPost from '../hooks/useContentfulBlogPost';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import PostView from '../components/PostView';
 import getUniquePostsBySlug from '../utils/getUniquePostBySlug';
 
-function BlogIndex({ data, location }: PagePropsType) {
-  const siteTitle = data.site.siteMetadata.title;
-  const contentfulPosts = data.allContentfulBlogPost.nodes;
+function BlogIndex({ location }: PagePropsType) {
+  const { title } = useSEOQuery();
+  const contentfulPosts = useContentfulBlogPost();
   const posts = getUniquePostsBySlug(contentfulPosts);
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={title}>
       <SEO title="All posts" />
       <Bio />
       {posts.map((node) => node && <PostView node={node} key={node.slug} />)}
@@ -20,28 +21,3 @@ function BlogIndex({ data, location }: PagePropsType) {
 }
 
 export default BlogIndex;
-
-export const pageQuery = graphql`
-  query AllBlogPost {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allContentfulBlogPost(
-      sort: { fields: [publishDate], order: DESC }
-      filter: { node_locale: { eq: "en-AU" } }
-    ) {
-      nodes {
-        title
-        slug
-        publishDate
-        description {
-          childMarkdownRemark {
-            html
-          }
-        }
-      }
-    }
-  }
-`;
