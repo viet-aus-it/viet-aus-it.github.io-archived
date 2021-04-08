@@ -8,7 +8,7 @@ describe('Post View', () => {
     const fullNode = {
       title: 'Test Post',
       slug: 'Test Post',
-      publishDate: '2020-04-27T12:00+11:00',
+      publishDate: '2020-03-27T12:00+11:00',
       description: {
         description: 'Test Description',
         childMarkdownRemark: {
