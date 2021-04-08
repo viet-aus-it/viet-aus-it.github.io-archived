@@ -47,7 +47,10 @@ interface ContentfulPost {
   slug: string;
   publishDate: string;
   description: {
-    description: string;
+    childMarkdownRemark: {
+      excerpt?: string;
+      html?: string;
+    };
   };
   body: {
     childMarkdownRemark: {

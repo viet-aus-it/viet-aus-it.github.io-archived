@@ -4,12 +4,12 @@ import { Link } from 'gatsby';
 import { rhythm } from '../utils/typography';
 import formatPublishedDate from '../utils/formatPublishedDate';
 
-function PostView({ node }: { node: ContentfulPost }) {
-  const {
-    title,
-    description: { description },
-  } = node;
-  const postContent = description;
+interface PostViewProp {
+  node: ContentfulPost;
+}
+
+function PostView({ node }: PostViewProp) {
+  const { title, description } = node;
   const publishedDate = formatPublishedDate(node.publishDate);
 
   return (
@@ -26,13 +26,11 @@ function PostView({ node }: { node: ContentfulPost }) {
         </h3>
         <small>{publishedDate}</small>
       </header>
-      <section>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: postContent,
-          }}
-        />
-      </section>
+      <section
+        dangerouslySetInnerHTML={{
+          __html: description.childMarkdownRemark.html || '<p></p>',
+        }}
+      />
     </article>
   );
 }

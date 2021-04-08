@@ -11,6 +11,10 @@ describe('Post View', () => {
       publishDate: '2020-04-27T12:00+11:00',
       description: {
         description: 'Test Description',
+        childMarkdownRemark: {
+          excerpt: 'Test Description',
+          html: '<p>Test Description</p>',
+        }
       },
       body: {
         childMarkdownRemark: {
