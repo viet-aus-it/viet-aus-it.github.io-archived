@@ -85,15 +85,3 @@ interface PagePropsType {
   data: SiteDataType;
   location: LocationType;
 }
-
-interface Author {
-  name: string;
-  summary: string;
-}
-
-interface SocialLink {
-  github: string;
-  discord: string;
-  facebookGroup: string;
-  facebookPage: string;
-}
