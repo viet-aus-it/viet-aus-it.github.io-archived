@@ -1,5 +1,6 @@
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { rhythm } from '../utils/typography';
+import getSocialLink from '../utils/getSocialLink';
 import { useBioQuery } from '../hooks';
 
 function Bio() {
@@ -29,14 +30,14 @@ function Bio() {
       <p>
         {`A blog by `}
         <strong>{author.name}</strong>
-        {` - ${author.summary}. We're on `}
-        <a href={`https://github.com/${social.github}`}>GitHub</a>
+        {` - ${author.summary}. Follow us on `}
+        <a href={getSocialLink('github', social.github)}>GitHub</a>
         {`, `}
-        <a href={`https://discord.gg/${social.discord}`}>Discord</a>
-        {`. Our Facebook `}
-        <a href={`https://discord.gg/${social.facebookGroup}`}>group</a>
+        <a href={getSocialLink('discord', social.discord)}>Discord</a>
+        {`, our Facebook `}
+        <a href={getSocialLink('facebookGroup', social.facebookGroup)}>group</a>
         {` and `}
-        <a href={`https://discord.gg/${social.facebookPage}`}>page</a>.
+        <a href={getSocialLink('facebookPage', social.facebookPage)}>page</a>.
       </p>
     </div>
   );
