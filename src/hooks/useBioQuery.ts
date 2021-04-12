@@ -16,6 +16,9 @@ function useBioQuery() {
           }
           social {
             github
+            discord
+            facebookPage
+            facebookGroup
           }
         }
       }
