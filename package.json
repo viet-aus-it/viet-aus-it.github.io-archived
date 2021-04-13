@@ -2,7 +2,7 @@
   "name": "@viet-aus-it/viet-aus-it.github.io",
   "private": true,
   "description": "Viet-Aus-IT blog",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Vietnamese Aussies in IT (https://github.com/viet-aus-it)",
   "contributors": [
     "Sam Huynh <samhwang2112.dev@gmail.com> (https://github.com/samhwang)"
@@ -31,7 +31,6 @@
     "deploy": "gh-pages -d public -b master"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.9.0",
     "date-fns": "^2.18.0",
     "dotenv": "^8.2.0",
     "gatsby": "^3.0.1",
@@ -77,6 +76,7 @@
     "@types/react-helmet": "^6.1.0",
     "@types/react-test-renderer": "^17.0.0",
     "@types/typography": "^0.16.3",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
     "@typescript-eslint/parser": "^4.9.0",
     "babel-jest": "^26.2.2",
     "babel-loader": "^8.1.0",
