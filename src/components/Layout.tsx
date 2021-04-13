@@ -14,6 +14,7 @@ function Layout({ location, title, children }: LayoutProps) {
   // @ts-ignore
   const pathPrefix = __PATH_PREFIX__;
   const rootPath = `${pathPrefix}/`;
+  const isRootPath = location.pathname === rootPath;
 
   return (
     <div
@@ -24,7 +25,7 @@ function Layout({ location, title, children }: LayoutProps) {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <Header title={title} isRootPath={location.pathname === rootPath} />
+      <Header title={title} isRootPath={isRootPath} />
       <main>{children}</main>
       <Footer />
     </div>
