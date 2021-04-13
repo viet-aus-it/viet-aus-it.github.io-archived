@@ -41,7 +41,8 @@ function SEO({ title, description, lang, meta }: SEOProps) {
     },
   ];
 
-  const helmetMeta = meta ? defaultMeta.concat(meta) : defaultMeta;
+  // This cannot be nulled, because we have the default prop as []
+  const helmetMeta = defaultMeta.concat(meta!);
 
   return (
     <Helmet
