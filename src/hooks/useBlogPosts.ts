@@ -1,8 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-function useContentfulBlogPost() {
+function useBlogPosts() {
   const data = useStaticQuery(graphql`
-    query AllContentfulBlogPost {
+    query AllContentfulBlogPosts {
       allContentfulBlogPost(
         sort: { fields: [publishDate], order: DESC }
         filter: { node_locale: { eq: "en-AU" } }
@@ -24,4 +24,4 @@ function useContentfulBlogPost() {
   return data.allContentfulBlogPost.nodes;
 }
 
-export default useContentfulBlogPost;
+export default useBlogPosts;

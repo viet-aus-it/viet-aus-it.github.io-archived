@@ -1,5 +1,5 @@
 import useBioQuery from './useBioQuery';
-import useContentfulBlogPost from './useContentfulBlogPost';
+import useBlogPosts from './useBlogPosts';
 import useSEOQuery from './useSEOQuery';
 
-export { useBioQuery, useContentfulBlogPost, useSEOQuery };
+export { useBioQuery, useBlogPosts, useSEOQuery };

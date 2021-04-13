@@ -1,5 +1,5 @@
 import { useStaticQuery } from 'gatsby';
-import { useBioQuery, useContentfulBlogPost, useSEOQuery } from '../hooks';
+import { useBioQuery, useBlogPosts, useSEOQuery } from '../hooks';
 
 jest.mock('gatsby');
 
@@ -106,8 +106,6 @@ describe('Use Contentful Blog Post Query', () => {
     };
     mockUseStaticQuery.mockReturnValueOnce(queryResult);
 
-    expect(useContentfulBlogPost()).toEqual(
-      queryResult.allContentfulBlogPost.nodes
-    );
+    expect(useBlogPosts()).toEqual(queryResult.allContentfulBlogPost.nodes);
   });
 });

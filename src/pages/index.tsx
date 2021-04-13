@@ -1,10 +1,10 @@
-import { useSEOQuery, useContentfulBlogPost } from '../hooks';
+import { useSEOQuery, useBlogPosts } from '../hooks';
 import { Bio, Layout, SEO, PostView } from '../components';
 import getUniquePostsBySlug from '../utils/getUniquePostBySlug';
 
 function BlogIndex({ location }: PagePropsType) {
   const { title } = useSEOQuery();
-  const contentfulPosts = useContentfulBlogPost();
+  const contentfulPosts = useBlogPosts();
   const posts = getUniquePostsBySlug(contentfulPosts);
 
   return (
