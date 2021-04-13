@@ -91,7 +91,7 @@ describe('Blog Post Template', () => {
     const currentPost: ContentfulPost = {
       title: 'post2',
       slug: 'post2',
-      publishDate: '2021-04-11T09:00+11:00',
+      publishDate: '2021-04-11T15:00+10:00',
       description: {
         childMarkdownRemark: {
           excerpt: 'post1',
@@ -123,7 +123,7 @@ describe('Blog Post Template', () => {
     const currentPost: ContentfulPost = {
       title: 'post2',
       slug: 'post2',
-      publishDate: '2021-04-11T09:00+11:00',
+      publishDate: '2021-04-11T15:00+10:00',
       description: {
         childMarkdownRemark: {
           excerpt: 'post1',
