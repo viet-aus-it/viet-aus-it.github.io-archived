@@ -8,21 +8,24 @@ import { rhythm, scale } from '../utils/typography';
 import formatPublishedDate from '../utils/formatPublishedDate';
 
 interface BlogPostProps {
-  data: SiteDataType;
+  data: { contentfulBlogPost: ContentfulPost };
   pageContext: {
-    previous: ContentfulPost | null;
-    next: ContentfulPost | null;
+    previous?: ContentfulPost;
+    next?: ContentfulPost;
   };
   location: LocationType;
 }
 
 function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
+  const { previous, next } = pageContext;
+
   const post = data.contentfulBlogPost;
   const pageTitle = post.title;
   const pageDescription = post.description.childMarkdownRemark.excerpt;
-  const { previous, next } = pageContext;
   const publishedDate = formatPublishedDate(post.publishDate);
   const heroImage = post.heroImage.gatsbyImageData;
+  const postAuthor = post.author;
+  const bodyHTML = post.body.childMarkdownRemark.html;
 
   return (
     <Layout location={location} title={pageTitle}>
@@ -35,7 +38,7 @@ function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
               marginBottom: 0,
             }}
           >
-            {post.title}
+            {pageTitle}
           </h1>
           <p
             style={{
@@ -47,15 +50,15 @@ function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
             {publishedDate}
           </p>
         </header>
-        <GatsbyImage image={heroImage} alt={post.title} />
+        <GatsbyImage image={heroImage} alt={pageTitle} />
         <section
           dangerouslySetInnerHTML={{
-            __html: post.body.childMarkdownRemark.html ?? '',
+            __html: bodyHTML ?? '',
           }}
         />
         <hr style={{ marginBottom: rhythm(1) }} />
         <footer>
-          <Author author={post.author} />
+          <Author author={postAuthor} />
         </footer>
       </article>
 
