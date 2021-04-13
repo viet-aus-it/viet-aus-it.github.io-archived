@@ -18,17 +18,15 @@ interface BlogPostProps {
 
 function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
   const post = data.contentfulBlogPost;
-  const siteTitle = data.site.siteMetadata.title;
+  const pageTitle = post.title;
+  const pageDescription = post.description.childMarkdownRemark.excerpt;
   const { previous, next } = pageContext;
   const publishedDate = formatPublishedDate(post.publishDate);
   const heroImage = post.heroImage.gatsbyImageData;
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.title ?? siteTitle}
-        description={post.body.childMarkdownRemark.excerpt}
-      />
+    <Layout location={location} title={pageTitle}>
+      <SEO title={pageTitle} description={pageDescription} />
       <article>
         <header>
           <h1
@@ -95,16 +93,16 @@ export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishDate
       heroImage {
         gatsbyImageData
+      }
+      description {
+        childMarkdownRemark {
+          excerpt
+        }
       }
       body {
         childMarkdownRemark {
