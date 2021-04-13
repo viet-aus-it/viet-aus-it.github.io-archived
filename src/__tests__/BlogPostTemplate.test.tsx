@@ -1,13 +1,38 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { render } from '@testing-library/react';
-import { PostView } from '../components';
+import { BlogPostTemplate } from '../components';
+import { useSEOQuery } from '../hooks';
 
-describe('Post View', () => {
+jest.mock('../hooks');
+
+describe('Blog Post Template', () => {
+  const mockUseSEOQuery = useSEOQuery as jest.MockedFunction<
+    typeof useSEOQuery
+  >;
+  mockUseSEOQuery.mockReturnValue({
+    title: 'Mock title',
+    description: 'Mock description',
+  });
+
+  const prevPost: ContentfulPost = {
+    title: 'post1',
+    slug: 'post1',
+  } as ContentfulPost;
+  const nextPost: ContentfulPost = {
+    title: 'post3',
+    slug: 'post3',
+  } as ContentfulPost;
+  const pageContext = {
+    previous: prevPost,
+    next: nextPost,
+  };
+  const location = { pathname: '' };
+
   const author: ContentfulAuthor = {
     name: 'author name',
     title: 'author title',
     company: 'author company',
     shortBio: {
-      shortBio: 'short bio',
       childMarkdownRemark: {
         html: 'body html',
       },
@@ -62,54 +87,65 @@ describe('Post View', () => {
     height: 396,
   };
 
-  it('should render "proper" post nodes', () => {
-    const fullNode = {
-      title: 'Test Post',
-      slug: 'Test Post',
-      publishDate: '2020-03-27T12:00+11:00',
+  it('Should render correctly with full post data', () => {
+    const currentPost: ContentfulPost = {
+      title: 'post2',
+      slug: 'post2',
+      publishDate: '2021-04-11T09:00+11:00',
       description: {
-        description: 'Test Description',
         childMarkdownRemark: {
-          excerpt: 'Test Description',
-          html: '<p>Test Description</p>',
+          excerpt: 'post1',
         },
       },
       body: {
         childMarkdownRemark: {
-          excerpt: '<p>This is just a test post</p>',
+          html: '<h1>Test HTML</h1>',
         },
       },
-      author,
       heroImage: {
         gatsbyImageData: image,
       },
+      author,
     };
+    const data = { contentfulBlogPost: currentPost };
 
-    const tree = render(<PostView node={fullNode} />);
+    const tree = render(
+      <BlogPostTemplate
+        data={data}
+        pageContext={pageContext}
+        location={location}
+      />
+    );
     expect(tree).toMatchSnapshot();
   });
 
-  it('Should render missing description html', () => {
-    const fullNode = {
-      title: 'Test Post',
-      slug: 'Test Post',
-      publishDate: '2020-03-27T12:00+11:00',
+  it('Should render correctly with missing body html', () => {
+    const currentPost: ContentfulPost = {
+      title: 'post2',
+      slug: 'post2',
+      publishDate: '2021-04-11T09:00+11:00',
       description: {
-        description: 'Test Description',
-        childMarkdownRemark: {},
-      },
-      body: {
         childMarkdownRemark: {
-          excerpt: '<p>This is just a test post</p>',
+          excerpt: 'post1',
         },
       },
-      author,
+      body: {
+        childMarkdownRemark: {},
+      },
       heroImage: {
         gatsbyImageData: image,
       },
+      author,
     };
+    const data = { contentfulBlogPost: currentPost };
 
-    const tree = render(<PostView node={fullNode} />);
+    const tree = render(
+      <BlogPostTemplate
+        data={data}
+        pageContext={pageContext}
+        location={location}
+      />
+    );
     expect(tree).toMatchSnapshot();
   });
 });

@@ -4,7 +4,7 @@ interface GatsbyImageData {
   height: number;
   width: number;
   layout: 'fixed' | 'fullWidth' | 'constrained';
-  backgroundColor: string;
+  backgroundColor?: string;
   images: {
     fallback: {
       src: string;
