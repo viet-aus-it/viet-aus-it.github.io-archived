@@ -2,9 +2,6 @@ const path = require(`path`);
 const { uniqBy } = require(`lodash`);
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
-
-  const blogPost = path.resolve(`./src/components/BlogPost.tsx`);
   const result = await graphql(`
     query ContentfulBlogPosts {
       allContentfulBlogPost(
@@ -24,8 +21,12 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Create blog posts pages.
+  const { createPage } = actions;
   const contentfulPosts = result.data.allContentfulBlogPost.nodes;
   const posts = uniqBy(contentfulPosts, (node) => node.slug);
+  const blogPostTemplate = path.resolve(
+    `./src/components/BlogPostTemplate.tsx`
+  );
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1];
@@ -33,7 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: post.slug,
-      component: blogPost,
+      component: blogPostTemplate,
       context: {
         slug: post.slug,
         previous,
