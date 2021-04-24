@@ -10,6 +10,6 @@ rm -Rf public/
 REMOTE_REPO="https://${ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 git add -fA
 git commit --allow-empty -m "Updates"
-git push ${REMOTE_REPO} master
+git push ${REMOTE_REPO} ${DEPLOY_BRANCH}
 
 echo "Successfully built and deployed."

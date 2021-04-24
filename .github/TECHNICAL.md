@@ -27,7 +27,7 @@ This is a start to finish workflow:
 - Test and lint and build
 - These two steps will happen in parallel
   - Upload the test coverage data to [coveralls.io](https://coveralls.io/github/viet-aus-it/viet-aus-it.github.io?branch=develop).
-  - Upload the built static assets and commit that into the master branch, which will be deployed to GitHub Pages.
+  - Upload the built static assets and commit that into the gh-pages branch, which will be deployed to GitHub Pages.
 
 ### Schedule Build and Manual Build
 

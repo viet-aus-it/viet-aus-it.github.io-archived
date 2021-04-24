@@ -3,7 +3,7 @@ name: Build GH Pages
 on:
   push:
     branches:
-      - develop
+      - main
     paths:
       - content/**
       - src/**
@@ -115,7 +115,7 @@ jobs:
       - name: Deploy to GitHub Pages
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          DEPLOY_BRANCH: master
+          DEPLOY_BRANCH: gh-pages
         run: |
           # yarn deploy
           bash ./.github/workflows/build.bash

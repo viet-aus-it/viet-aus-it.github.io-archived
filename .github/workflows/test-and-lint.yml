@@ -3,7 +3,7 @@ name: Run Tests and Lints before merging into main branch
 on:
   pull_request:
     branches:
-      - develop
+      - main
     paths:
       - src/**
 

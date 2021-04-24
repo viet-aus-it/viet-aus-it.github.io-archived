@@ -28,7 +28,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "predeploy": "gh-pages-clean",
-    "deploy": "gh-pages -d public -b master"
+    "deploy": "gh-pages -d public -b gh-pages"
   },
   "dependencies": {
     "date-fns": "^2.18.0",
