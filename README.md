@@ -10,11 +10,11 @@ Created with [Gatsby](https://gatsbyjs.org), hosted on [GitHub Pages](https://pa
 
 ## Technical details
 
-For technical details, please refer to [TECHNICAL.md](https://github.com/viet-aus-it/viet-aus-it.github.io/blob/develop/.github/TECHNICAL.md).
+For technical details, please refer to [TECHNICAL.md](.github/TECHNICAL.md).
 
 ## Working with this repo
 
-For Contributions, please have a look at our [CONTRIBUTORS.md](https://github.com/viet-aus-it/viet-aus-it.github.io/blob/develop/.github/CONTRIBUTING.md)
+For Contributions, please have a look at our [CONTRIBUTORS.md](.github/CONTRIBUTING.md)
 
 ```bash
 git clone https://github.com/viet-aus-it/viet-aus-it.github.io.git

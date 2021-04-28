@@ -2,7 +2,7 @@
 
 ## Language
 
-- TypeScript (primary) and React, runnning on Node 12
+- TypeScript (primary) and React, runnning on Node 14
 - JavaScript configurations for Gatsby, and Jest.
 
 ## Tools
