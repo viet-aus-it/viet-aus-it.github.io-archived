@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://viet-aus-it.github.io/sitemap.xml
+Sitemap: https://viet-aus-it.github.io/sitemap/sitemap-index.xml
 Host: https://viet-aus-it.github.io
