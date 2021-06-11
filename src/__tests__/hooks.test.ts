@@ -19,8 +19,7 @@ describe('Use Bio Query', () => {
             backgroundColor: '#ffffff',
             images: {
               fallback: {
-                src:
-                  '/static/15bedc08e38e45f354967dc7a3797c7f/c8e32/avatar.png',
+                src: '/static/15bedc08e38e45f354967dc7a3797c7f/c8e32/avatar.png',
                 srcSet:
                   '/static/15bedc08e38e45f354967dc7a3797c7f/c8e32/avatar.png 420w',
                 sizes: '420px',

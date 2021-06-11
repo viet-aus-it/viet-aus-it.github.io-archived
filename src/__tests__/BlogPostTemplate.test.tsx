@@ -51,8 +51,7 @@ describe('Blog Post Template', () => {
             },
           ],
           fallback: {
-            src:
-              '//images.ctfassets.net/yy5lveaxjicl/7orLdboQQowIUs22KAW4U/8062cc92daeecfeb308f317f7f7d3dd9/matt-palmer-254999.jpg?w=3000&h=2000&fl=progressive&q=50&fm=jpg',
+            src: '//images.ctfassets.net/yy5lveaxjicl/7orLdboQQowIUs22KAW4U/8062cc92daeecfeb308f317f7f7d3dd9/matt-palmer-254999.jpg?w=3000&h=2000&fl=progressive&q=50&fm=jpg',
             srcSet:
               '//images.ctfassets.net/yy5lveaxjicl/7orLdboQQowIUs22KAW4U/8062cc92daeecfeb308f317f7f7d3dd9/matt-palmer-254999.jpg?w=750&h=500&fl=progressive&q=50&fm=jpg 750w,\n//images.ctfassets.net/yy5lveaxjicl/7orLdboQQowIUs22KAW4U/8062cc92daeecfeb308f317f7f7d3dd9/matt-palmer-254999.jpg?w=1500&h=1000&fl=progressive&q=50&fm=jpg 1500w,\n//images.ctfassets.net/yy5lveaxjicl/7orLdboQQowIUs22KAW4U/8062cc92daeecfeb308f317f7f7d3dd9/matt-palmer-254999.jpg?w=3000&h=2000&fl=progressive&q=50&fm=jpg 3000w',
             sizes: '(min-width: 3000px) 3000px, 100vw',
@@ -75,8 +74,7 @@ describe('Blog Post Template', () => {
         },
       ],
       fallback: {
-        src:
-          '//images.ctfassets.net/yy5lveaxjicl/5wc4kuJb2nL14aLQsr0tNk/ba395bd96a73b832eb2ac6a1a02f170f/image.png?w=628&h=396&q=50&fm=png',
+        src: '//images.ctfassets.net/yy5lveaxjicl/5wc4kuJb2nL14aLQsr0tNk/ba395bd96a73b832eb2ac6a1a02f170f/image.png?w=628&h=396&q=50&fm=png',
         srcSet:
           '//images.ctfassets.net/yy5lveaxjicl/5wc4kuJb2nL14aLQsr0tNk/ba395bd96a73b832eb2ac6a1a02f170f/image.png?w=157&h=99&q=50&fm=png 157w,\n//images.ctfassets.net/yy5lveaxjicl/5wc4kuJb2nL14aLQsr0tNk/ba395bd96a73b832eb2ac6a1a02f170f/image.png?w=314&h=198&q=50&fm=png 314w,\n//images.ctfassets.net/yy5lveaxjicl/5wc4kuJb2nL14aLQsr0tNk/ba395bd96a73b832eb2ac6a1a02f170f/image.png?w=628&h=396&q=50&fm=png 628w',
         sizes: '(min-width: 628px) 628px, 100vw',

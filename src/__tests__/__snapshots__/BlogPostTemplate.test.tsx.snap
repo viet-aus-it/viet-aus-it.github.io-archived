@@ -37,7 +37,7 @@ Object {
             <div
               class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
               data-gatsby-image-wrapper=""
-              style="position: relative; overflow: hidden; display: inline-block;"
+              style="position: relative; overflow: hidden; display: inline-block; vertical-align: top;"
             >
               <div
                 style="max-width: 628px; display: block;"
@@ -212,7 +212,7 @@ Object {
           <div
             class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
             data-gatsby-image-wrapper=""
-            style="position: relative; overflow: hidden; display: inline-block;"
+            style="position: relative; overflow: hidden; display: inline-block; vertical-align: top;"
           >
             <div
               style="max-width: 628px; display: block;"
@@ -444,7 +444,7 @@ Object {
             <div
               class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
               data-gatsby-image-wrapper=""
-              style="position: relative; overflow: hidden; display: inline-block;"
+              style="position: relative; overflow: hidden; display: inline-block; vertical-align: top;"
             >
               <div
                 style="max-width: 628px; display: block;"
@@ -615,7 +615,7 @@ Object {
           <div
             class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
             data-gatsby-image-wrapper=""
-            style="position: relative; overflow: hidden; display: inline-block;"
+            style="position: relative; overflow: hidden; display: inline-block; vertical-align: top;"
           >
             <div
               style="max-width: 628px; display: block;"
