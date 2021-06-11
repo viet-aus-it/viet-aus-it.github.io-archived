@@ -39,7 +39,9 @@
     "prettier/prettier": ["error"],
     "import/extensions": ["error", "never"],
     "no-undef": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "react/no-danger": "off",
+    "react/prop-types": "off"
   },
   "settings": {
     "import/parser": {
