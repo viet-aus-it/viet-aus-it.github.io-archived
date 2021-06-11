@@ -1,4 +1,4 @@
-/* eslint-disable react/no-danger */
+import { FC } from 'react';
 import { Link, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Author from './Author';
@@ -16,7 +16,11 @@ interface BlogPostProps {
   location: LocationType;
 }
 
-function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
+const BlogPostTemplate: FC<BlogPostProps> = ({
+  data,
+  pageContext,
+  location,
+}) => {
   const { previous, next } = pageContext;
 
   const post = data.contentfulBlogPost;
@@ -90,7 +94,7 @@ function BlogPostTemplate({ data, pageContext, location }: BlogPostProps) {
       </nav>
     </Layout>
   );
-}
+};
 
 export default BlogPostTemplate;
 

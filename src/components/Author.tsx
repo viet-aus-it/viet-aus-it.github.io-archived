@@ -1,4 +1,5 @@
 /* eslint-disable react/no-danger */
+import { FC } from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { rhythm } from '../utils/typography';
 
@@ -6,7 +7,7 @@ interface AuthorProps {
   author: ContentfulAuthor;
 }
 
-function Author({ author }: AuthorProps) {
+const Author: FC<AuthorProps> = ({ author }) => {
   const avatar = author.image.gatsbyImageData;
 
   return (
@@ -42,6 +43,6 @@ function Author({ author }: AuthorProps) {
       </p>
     </div>
   );
-}
+};
 
 export default Author;

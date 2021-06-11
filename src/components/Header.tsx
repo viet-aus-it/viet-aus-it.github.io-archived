@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Link } from 'gatsby';
 import { rhythm, scale } from '../utils/typography';
 
@@ -6,7 +7,7 @@ interface HeaderProps {
   title: string;
 }
 
-function Header({ isRootPath, title }: HeaderProps) {
+const Header: FC<HeaderProps> = ({ isRootPath, title }) => {
   const LinkContent = (
     <Link
       style={{
@@ -45,6 +46,6 @@ function Header({ isRootPath, title }: HeaderProps) {
   const HeaderContent = isRootPath ? RootHeader : PageHeader;
 
   return <header>{HeaderContent}</header>;
-}
+};
 
 export default Header;

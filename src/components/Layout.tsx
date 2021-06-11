@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { FC } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { rhythm } from '../utils/typography';
@@ -6,10 +6,9 @@ import { rhythm } from '../utils/typography';
 interface LayoutProps {
   location: LocationType;
   title: string;
-  children: ReactNode | Element;
 }
 
-function Layout({ location, title, children }: LayoutProps) {
+const Layout: FC<LayoutProps> = ({ location, title, children }) => {
   // This is not going to be undef, since it's going to be passed in upon build.
   // @ts-ignore
   const pathPrefix = __PATH_PREFIX__;
@@ -30,6 +29,6 @@ function Layout({ location, title, children }: LayoutProps) {
       <Footer />
     </div>
   );
-}
+};
 
 export default Layout;

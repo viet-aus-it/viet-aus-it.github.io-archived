@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Helmet } from 'react-helmet';
 import { useSEOQuery } from '../hooks';
 
@@ -14,7 +15,7 @@ interface SEOProps {
   meta?: Array<MetaProp> | MetaProp;
 }
 
-function SEO({ title, description, lang, meta }: SEOProps) {
+const SEO: FC<SEOProps> = ({ title, description, lang, meta }) => {
   const defaultFallback = useSEOQuery();
   const siteTitle = defaultFallback.title;
   const metaDescription = description || defaultFallback.description;
@@ -62,7 +63,7 @@ function SEO({ title, description, lang, meta }: SEOProps) {
       ))}
     </Helmet>
   );
-}
+};
 
 SEO.defaultProps = {
   lang: `en`,

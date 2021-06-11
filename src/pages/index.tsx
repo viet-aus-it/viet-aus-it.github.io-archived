@@ -1,8 +1,9 @@
+import { FC } from 'react';
 import { useSEOQuery, useBlogPosts } from '../hooks';
 import { Bio, Layout, SEO, PostView } from '../components';
 import getUniquePostsBySlug from '../utils/getUniquePostBySlug';
 
-function BlogIndex({ location }: PagePropsType) {
+const BlogIndex: FC<PagePropsType> = ({ location }) => {
   const { title } = useSEOQuery();
   const contentfulPosts = useBlogPosts();
   const posts = getUniquePostsBySlug(contentfulPosts);
@@ -14,6 +15,6 @@ function BlogIndex({ location }: PagePropsType) {
       {posts.map((node) => node && <PostView node={node} key={node.slug} />)}
     </Layout>
   );
-}
+};
 
 export default BlogIndex;

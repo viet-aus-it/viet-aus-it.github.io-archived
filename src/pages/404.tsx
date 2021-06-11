@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import { useSEOQuery } from '../hooks';
 import { Layout, SEO } from '../components';
 
-function NotFoundPage({ location }: PagePropsType) {
+const NotFoundPage: FC<PagePropsType> = ({ location }) => {
   const { title } = useSEOQuery();
 
   return (
@@ -11,6 +12,6 @@ function NotFoundPage({ location }: PagePropsType) {
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </Layout>
   );
-}
+};
 
 export default NotFoundPage;

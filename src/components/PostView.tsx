@@ -1,5 +1,4 @@
-/* eslint-disable react/no-danger */
-
+import { FC } from 'react';
 import { Link } from 'gatsby';
 import { rhythm } from '../utils/typography';
 import formatPublishedDate from '../utils/formatPublishedDate';
@@ -8,7 +7,7 @@ interface PostViewProp {
   node: ContentfulPost;
 }
 
-function PostView({ node }: PostViewProp) {
+const PostView: FC<PostViewProp> = ({ node }) => {
   const { title, description } = node;
   const publishedDate = formatPublishedDate(node.publishDate);
 
@@ -33,6 +32,6 @@ function PostView({ node }: PostViewProp) {
       />
     </article>
   );
-}
+};
 
 export default PostView;

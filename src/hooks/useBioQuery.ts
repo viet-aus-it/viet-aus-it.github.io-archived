@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
-function useBioQuery() {
+const useBioQuery = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/avatar.png/" }) {
@@ -29,6 +29,6 @@ function useBioQuery() {
   const avatar = data.avatar.childImageSharp.gatsbyImageData;
 
   return { author, social, avatar };
-}
+};
 
 export default useBioQuery;

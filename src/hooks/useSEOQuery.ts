@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
-function useSEOQuery() {
+const useSEOQuery = () => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -15,6 +15,6 @@ function useSEOQuery() {
   );
 
   return data.site.siteMetadata;
-}
+};
 
 export default useSEOQuery;

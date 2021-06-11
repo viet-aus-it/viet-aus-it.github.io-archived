@@ -1,4 +1,6 @@
-function Footer() {
+import { FC } from 'react';
+
+const Footer: FC = () => {
   const CurrentYear = new Date().getFullYear();
 
   return (
@@ -9,6 +11,6 @@ function Footer() {
       <a href="https://pages.github.com/">GitHub Pages</a>
     </footer>
   );
-}
+};
 
 export default Footer;

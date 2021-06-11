@@ -1,9 +1,10 @@
+import { FC } from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { rhythm } from '../utils/typography';
 import getSocialLink from '../utils/getSocialLink';
 import { useBioQuery } from '../hooks';
 
-function Bio() {
+const Bio: FC = () => {
   const { author, social, avatar } = useBioQuery();
 
   return (
@@ -41,6 +42,6 @@ function Bio() {
       </p>
     </div>
   );
-}
+};
 
 export default Bio;

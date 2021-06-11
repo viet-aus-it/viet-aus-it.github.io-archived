@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-function useBlogPosts() {
+const useBlogPosts = () => {
   const data = useStaticQuery(graphql`
     query AllContentfulBlogPosts {
       allContentfulBlogPost(
@@ -22,6 +22,6 @@ function useBlogPosts() {
   `);
 
   return data.allContentfulBlogPost.nodes;
-}
+};
 
 export default useBlogPosts;
